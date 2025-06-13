@@ -25,16 +25,40 @@
 #                     \          \
 #                      \          \
 #   Feed me Stars ⭐    \          \
-# ==============================================================================
+# ===============================================================================
 
-
-import uvicorn
+from app.utils.logging_utils import configure_logging
+from contextlib import asynccontextmanager
+from fastapi import FastAPI
+from app.api.router import router as api_router
+from app.utils.logging_utils import configure_logging
 from config.settings import Settings
 
-if __name__ == "__main__":
-    uvicorn.run(
-        "app.main:app",
-        host=Settings.FastAPISettings.ip,
-        port=Settings.FastAPISettings.port,
-        reload=Settings.FastAPISettings.reload_on_file_change,
-    )
+
+# Configure the logger
+logger = configure_logging(name=__name__)
+
+# API Tags
+tags_metadata = [
+    {"name": "Health-Check", "description": "**Server Health Check**"},
+    {"name": "Polloai-Resource", "description": "Resources created by artificial intelligence"},
+]
+
+
+@asynccontextmanager
+async def lifespan(application: FastAPI):
+    pass
+
+
+app = FastAPI(
+    title=Settings.FastAPISettings.title,
+    description=Settings.FastAPISettings.description,
+    version=Settings.FastAPISettings.version,
+    openapi_tags=tags_metadata,
+    docs_url=Settings.FastAPISettings.docs_url,
+    debug=Settings.FastAPISettings.debug,
+    # lifespan=lifespan,
+)
+
+# API Router
+app.include_router(api_router, prefix="/api")

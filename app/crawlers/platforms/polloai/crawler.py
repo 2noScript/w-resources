@@ -28,13 +28,28 @@
 # ==============================================================================
 
 
-import uvicorn
+import httpx
+from app.crawlers.platforms.polloai.endpoints import PolloaiEndpoints
 from config.settings import Settings
 
-if __name__ == "__main__":
-    uvicorn.run(
-        "app.main:app",
-        host=Settings.FastAPISettings.ip,
-        port=Settings.FastAPISettings.port,
-        reload=Settings.FastAPISettings.reload_on_file_change,
-    )
+
+class PolloAiCrawler:
+
+    async def get_headers(self):
+        Cookie = Settings.PolloaiSettings.cookie
+        if not Cookie:
+            raise ValueError("Please configure the Polloai Web Cookie")
+
+        kwargs = {
+            "headers": {
+                "Cookie": Cookie,
+                "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
+                "User-Agent": "Googlebot-Image/1.0",
+                "Referer": "https://pollo.ai/ai-effects/AI%20Twerk%20Video%20Generator",
+            },
+            "proxies": {
+                "http://": Settings.DouyinAPISettings.proxy,
+                "https://": Settings.DouyinAPISettings.proxy,
+            },
+        }
+        return kwargs

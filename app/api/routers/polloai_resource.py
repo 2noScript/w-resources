@@ -12,29 +12,44 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-#                       ,-,-
-#                      / / |
-#    ,-'             _/ / /
-#   (-_          _,-' `Z_/
-#    "#:      ,-'_,-.    \  _
-#     #'    _(_-'_()\     \" |
-#   ,--_,--'                 |
-#  / ""                      L-'\
-#  \,--^---v--v-._        /   \ |
-#    \_________________,-'      |
+#                       ,-,-      
+#                      / / |      
+#    ,-'             _/ / /       
+#   (-_          _,-' `Z_/        
+#    "#:      ,-'_,-.    \  _     
+#     #'    _(_-'_()\     \" |    
+#   ,--_,--'                 |    
+#  / ""                      L-'\ 
+#  \,--^---v--v-._        /   \ | 
+#    \_________________,-'      | 
 #                     \          \
 #                      \          \
-#   Feed me Stars ⭐    \          \
+#   Feed me Stars ⭐    \          \                           
 # ==============================================================================
 
 
-import uvicorn
-from config.settings import Settings
+import traceback
+from typing import Union
+from fastapi import Request, APIRouter, HTTPException, Form, status
+from app.utils.logging_utils import configure_logging
+from app.crawlers.platforms.polloai.crawler import PolloAiCrawler
 
-if __name__ == "__main__":
-    uvicorn.run(
-        "app.main:app",
-        host=Settings.FastAPISettings.ip,
-        port=Settings.FastAPISettings.port,
-        reload=Settings.FastAPISettings.reload_on_file_change,
-    )
+
+polloai_crawler = PolloAiCrawler()
+
+
+
+router = APIRouter()
+
+logger = configure_logging(name=__name__)
+
+@router.post("/explore")
+async def get_explore():
+    return {}
+
+@router.post("/audio")
+async def get_audio_list():
+    return {}
+
+
+

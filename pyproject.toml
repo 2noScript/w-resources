@@ -6,5 +6,9 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "concurrent-log-handler>=0.9.28",
+    "fastapi>=0.115.12",
     "httpx>=0.28.1",
+    "python-dotenv>=1.1.0",
+    "tenacity>=9.1.2",
+    "uvicorn>=0.34.3",
 ]

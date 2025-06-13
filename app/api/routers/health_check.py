@@ -28,13 +28,28 @@
 # ==============================================================================
 
 
-import uvicorn
-from config.settings import Settings
+from fastapi import APIRouter, status
+from pydantic import BaseModel
 
-if __name__ == "__main__":
-    uvicorn.run(
-        "app.main:app",
-        host=Settings.FastAPISettings.ip,
-        port=Settings.FastAPISettings.port,
-        reload=Settings.FastAPISettings.reload_on_file_change,
-    )
+router = APIRouter()
+
+
+class HealthCheckResponse(BaseModel):
+    status: str = "ok"
+
+
+@router.get(
+    "/check",
+    summary="Check if the server responds to requests correctly",
+    response_model=HealthCheckResponse,
+    status_code=status.HTTP_200_OK,
+    responses={
+        200: {
+            "description": "Server responds successfully",
+            "content": {"application/json": {"example": {"status": "ok"}}},
+        }
+    },
+)
+async def health_check():
+
+    return HealthCheckResponse()

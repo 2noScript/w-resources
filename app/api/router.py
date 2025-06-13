@@ -25,16 +25,17 @@
 #                     \          \
 #                      \          \
 #   Feed me Stars ⭐    \          \
-# ==============================================================================
+# ===============================================================================
+
+from fastapi import APIRouter
+from app.api.routers import health_check, polloai_resource
 
 
-import uvicorn
-from config.settings import Settings
+router = APIRouter()
 
-if __name__ == "__main__":
-    uvicorn.run(
-        "app.main:app",
-        host=Settings.FastAPISettings.ip,
-        port=Settings.FastAPISettings.port,
-        reload=Settings.FastAPISettings.reload_on_file_change,
-    )
+
+# Health Check routers
+router.include_router(health_check.router, prefix="/health", tags=["Health-Check"])
+
+# Polloai Resource
+router.include_router(polloai_resource.router, prefix="/polloai", tags=["Polloai-Resource"])

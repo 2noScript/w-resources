@@ -12,29 +12,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-#                       ,-,-
-#                      / / |
-#    ,-'             _/ / /
-#   (-_          _,-' `Z_/
-#    "#:      ,-'_,-.    \  _
-#     #'    _(_-'_()\     \" |
-#   ,--_,--'                 |
-#  / ""                      L-'\
-#  \,--^---v--v-._        /   \ |
-#    \_________________,-'      |
+#                       ,-,-      
+#                      / / |      
+#    ,-'             _/ / /       
+#   (-_          _,-' `Z_/        
+#    "#:      ,-'_,-.    \  _     
+#     #'    _(_-'_()\     \" |    
+#   ,--_,--'                 |    
+#  / ""                      L-'\ 
+#  \,--^---v--v-._        /   \ | 
+#    \_________________,-'      | 
 #                     \          \
 #                      \          \
-#   Feed me Stars ⭐    \          \
+#   Feed me Stars ⭐    \          \                           
 # ==============================================================================
 
 
-import uvicorn
-from config.settings import Settings
 
-if __name__ == "__main__":
-    uvicorn.run(
-        "app.main:app",
-        host=Settings.FastAPISettings.ip,
-        port=Settings.FastAPISettings.port,
-        reload=Settings.FastAPISettings.reload_on_file_change,
-    )
+class PolloaiEndpoints:
+
+    DOMAIN = "https://pollo.ai/api"
+
+    HOME_VIDEO=f"{DOMAIN}/trpc/video.trendingList"
+

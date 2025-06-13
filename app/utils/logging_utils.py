@@ -12,19 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-#                       ,-,-      
-#                      / / |      
-#    ,-'             _/ / /       
-#   (-_          _,-' `Z_/        
-#    "#:      ,-'_,-.    \  _     
-#     #'    _(_-'_()\     \" |    
-#   ,--_,--'                 |    
-#  / ""                      L-'\ 
-#  \,--^---v--v-._        /   \ | 
-#    \_________________,-'      | 
+#                       ,-,-
+#                      / / |
+#    ,-'             _/ / /
+#   (-_          _,-' `Z_/
+#    "#:      ,-'_,-.    \  _
+#     #'    _(_-'_()\     \" |
+#   ,--_,--'                 |
+#  / ""                      L-'\
+#  \,--^---v--v-._        /   \ |
+#    \_________________,-'      |
 #                     \          \
 #                      \          \
-#   Feed me Stars ⭐    \          \                           
+#   Feed me Stars ⭐    \          \
 # ==============================================================================
 
 
@@ -42,7 +42,7 @@ def configure_logging(
     log_dir: Optional[str] = Settings.LogSettings.log_dir,
     log_file_prefix: Optional[str] = Settings.LogSettings.log_file_prefix,
     backup_count: int = Settings.LogSettings.backup_count,
-    encoding: str = Settings.LogSettings.encoding
+    encoding: str = Settings.LogSettings.encoding,
 ) -> logging.Logger:
     """
     A logger that supports log rotation and console output, using the ConcurrentRotatingFileHandler handler.
@@ -61,7 +61,7 @@ def configure_logging(
     # Prevent duplicate handlers
     if not logger.handlers:
         formatter = logging.Formatter(
-            '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+            "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
         )
 
         # Create log directory
@@ -76,7 +76,7 @@ def configure_logging(
             rotating_file_handler = ConcurrentRotatingFileHandler(
                 filename=log_file_path,
                 # Set max file size to 10 MB
-                maxBytes=10*1024*1024,
+                maxBytes=10 * 1024 * 1024,
                 backupCount=backup_count,
                 encoding=encoding,
             )
