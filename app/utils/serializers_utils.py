@@ -28,32 +28,17 @@
 # ==============================================================================
 
 
-import traceback
-from typing import Union
-from fastapi import Request, APIRouter, HTTPException, Form, status
-from app.utils.logging_utils import configure_logging
-from app.crawlers.platforms.polloai.crawler import PolloAiCrawler
-from app.api.models.APIResponseModel import ResponseModel, ErrorResponseModel
+# Convert a class to a dictionary
 
 
-polloai_crawler = PolloAiCrawler()
-
-
-router = APIRouter()
-
-logger = configure_logging(name=__name__)
-
-
-@router.get("/tags")
-async def get_tags() -> Union[ResponseModel, ErrorResponseModel]:
-    return ResponseModel(router="polloai/tags", data=polloai_crawler.fetch_tags())
-
-
-@router.post("/explore")
-async def get_explore():
-    return {}
-
-
-@router.post("/audio")
-async def get_audio_list():
-    return {}
+def class_to_dict(cls):
+    result = {}
+    for attr_name in dir(cls):
+        if attr_name.startswith("__"):
+            continue
+        attr = getattr(cls, attr_name)
+        if isinstance(attr, type):  
+            result[attr_name] = class_to_dict(attr)
+        elif not callable(attr):  
+            result[attr_name] = attr
+    return result

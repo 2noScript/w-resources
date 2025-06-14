@@ -33,6 +33,8 @@ from pydantic import BaseModel
 class Input(BaseModel):
     pass
 
+
 class BaseReqModel(BaseModel):
     limit: int = 20
-    batch: int = 1
+    tag: str = "video"
+    sub_tag: str = "nature"
