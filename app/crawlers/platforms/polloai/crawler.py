@@ -31,7 +31,8 @@
 import httpx
 from app.crawlers.platforms.polloai.endpoints import PolloaiEndpoints
 from config.settings import Settings
-
+from tenacity import retry, stop_after_attempt, wait_fixed
+from app.http_client.AsyncHttpClient import AsyncHttpClient
 
 class PolloAiCrawler:
 
@@ -53,3 +54,17 @@ class PolloAiCrawler:
             },
         }
         return kwargs
+
+    @retry(stop=stop_after_attempt(3), retry_error_callback=lambda retry_state: retry_state.outcome.result())
+    async def fetch_explore(self):
+        kwargs = await self.get_headers()
+
+        async with AsyncHttpClient(proxy_settings=kwargs["proxies"], headers=kwargs["headers"]) as client:
+            endpoint={
+
+            }
+            
+           
+
+
+

@@ -27,12 +27,11 @@
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
 
-from pydantic import BaseModel
+
+from fastapi import Form
+from pydantic import HttpUrl
 
 
-class Input(BaseModel):
-    pass
 
-class BaseReqModel(BaseModel):
-    limit: int = 20
-    batch: int = 1
+
+

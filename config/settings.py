@@ -32,7 +32,7 @@ import os
 from typing import Optional
 from dotenv import load_dotenv
 
-# 加载 .env 文件 | Load .env file
+# Load .env file
 load_dotenv()
 
 
