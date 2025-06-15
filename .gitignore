@@ -10,3 +10,4 @@ wheels/
 .venv
 .env
 tests/raw
+log_files
