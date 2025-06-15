@@ -31,6 +31,26 @@
 from datetime import datetime
 from typing import Any, Optional, Dict
 from pydantic import BaseModel, Field
+from fastapi import Form
+
+
+
+class RequestModel(BaseModel):
+    tag: str = Form(
+        default="",
+        description="The tag of the resource",
+        example="anime",
+    )
+    sub_tag: str = Form(
+        default="",
+        description="The sub tag of the resource",
+        example="anime",
+    )
+    limit: int = Form(
+        default=20,
+        description="The limit of the resource",
+        example=20,
+    )
 
 
 # Create a common response model
@@ -44,9 +64,11 @@ class ResponseModel(BaseModel):
         default_factory=dict,
         description="The parameters used in the request ",
     )
-    data: Optional[Any] = Field(
-        default=None, description="The response data"
-    )
+    data: Optional[Any] = Field(default=None, description="The response data")
+    
+    metadata:Optional[dict] = Field(default_factory=dict,description="The continuation metadata")
+
+    
 
     class Config:
         schema_extra = {
@@ -84,8 +106,10 @@ class ErrorResponseModel(BaseModel):
             "example": {
                 "code": 400,
                 "message": "Invalid request parameters.",
-                "time": "2024-10-27 14:30:00",
+                "time": "2025-10-27 14:30:00",
                 "router": "/example/endpoint",
                 "params": {"param1": "invalid"},
             }
         }
+
+

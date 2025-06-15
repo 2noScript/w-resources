@@ -70,44 +70,44 @@ class Tags:
             name = "Sunset"
             value = "sunset"
 
-    class AiEffects:
+    class AIEffects:
         name = "AI Effects"
         value = "ai effects"
 
-        class AiKissing:
+        class AIKissing:
             name = "AI Kissing"
             value = "AI Kissing Video Generator"
 
-        class AiHug:
-            name = "Ai Hug"
+        class AIHug:
+            name = "AI Hug"
             value = "AI Hug"
 
-        class AiTwerk:
-            name = "Ai Twerk"
+        class AITwerk:
+            name = "AI Twerk"
             value = "AI Twerk Video Generator"
 
-        class AiBikini:
-            name = "Ai Bikini"
+        class AIBikini:
+            name = "AI Bikini"
             value = "AI Bikini"
 
-        class AiMuscle:
-            name = "Ai Muscle"
+        class AIMuscle:
+            name = "AI Muscle"
             value = "AI Muscle Generator"
 
-        class AiFlying:
-            name = "Ai Flying"
+        class AIFlying:
+            name = "AI Flying"
             value = "AI Flying Video Generator"
 
-        class AiGenderSwap:
-            name = "Ai Gender Swap"
+        class AIGenderSwap:
+            name = "AI Gender Swap"
             value = "AI Gender Swap Video Generator"
 
-        class AiFrenchKissing:
-            name = "Ai French Kissing"
+        class AIFrenchKissing:
+            name = "AI French Kissing"
             value = "AI French Kissing"
 
-        class AiJiggleVideoEffect:
-            name = "Ai Jiggle Video Effect"
+        class AIJiggleVideoEffect:
+            name = "AI Jiggle Video Effect"
             value = "AI Jiggle Video Effect"
 
     class Anime:

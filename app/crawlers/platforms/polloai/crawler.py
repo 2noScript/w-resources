@@ -28,13 +28,16 @@
 # ==============================================================================
 
 
-import httpx
+from app.api.models.DataBaseModel import Data, DataType, MediaType, Video
 from app.crawlers.platforms.polloai.endpoints import PolloaiEndpoints
 from config.settings import Settings
 from tenacity import retry, stop_after_attempt, wait_fixed
-from app.http_client.AsyncHttpClient import AsyncHttpClient
 from app.utils.serializers_utils import class_to_dict
 from app.crawlers.platforms.polloai.tags import Tags
+from typing import Optional
+from curl_cffi import AsyncSession
+from typing import Optional, List
+import json
 
 
 class PolloAiCrawler:
@@ -42,33 +45,64 @@ class PolloAiCrawler:
     def fetch_tags(self):
         return class_to_dict(Tags)
 
-    async def get_headers(self):
-        Cookie = Settings.PolloaiSettings.cookie
-        if not Cookie:
-            raise ValueError("Please configure the Polloai Web Cookie")
+    def extract_data(self, raw_data) -> List[Data]:
+        data: List[Data] = []
+        for item in raw_data:
+            if item["mediaType"] == "video":
+                video = Video(
+                    title=item["title"],
+                    thumbnail=item["cover"],
+                    video_url=item["videoUrl"],
+                    video_url_nwm=item["videoUrlNoWatermark"],
+                    duration_ms=item["durationMs"],
+                    keywork=item["tags"],
+                    star=item["starNum"],
+                    share=item["shareNum"],
+                )
+                data.append(
+                    Data(
+                        id=item["videoId"],
+                        prompt=item["generateRecord"]["prompt"],
+                        data_type=DataType.AI_GENERATOR,
+                        media_type=[MediaType.VIDEO],
+                        video=video,
+                    )
+                )
 
-        kwargs = {
-            "headers": {
-                "Cookie": Cookie,
-                "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8",
-                "User-Agent": "Googlebot-Image/1.0",
-                "Referer": "https://pollo.ai/ai-effects/AI%20Twerk%20Video%20Generator",
-            },
-            "proxies": {
-                "http://": Settings.DouyinAPISettings.proxy,
-                "https://": Settings.DouyinAPISettings.proxy,
-            },
-        }
-        return kwargs
+        return data
 
     @retry(
         stop=stop_after_attempt(3),
         retry_error_callback=lambda retry_state: retry_state.outcome.result(),
     )
-    async def fetch_explore(self):
-        kwargs = await self.get_headers()
-
-        async with AsyncHttpClient(
-            proxy_settings=kwargs["proxies"], headers=kwargs["headers"]
-        ) as client:
-            endpoint = {}
+    async def fetch_explore(
+        self, tag: str, sub_tag: str, limit: int = 20, cursor: Optional[str] = None
+    ):
+        params = {
+            "batch": 1,
+            "input": json.dumps(
+                {
+                    "0": {
+                        "json": {
+                            "limit": limit,
+                            "score": "desc",
+                            "type": tag,
+                            "tag": sub_tag,
+                            "cursor": cursor,
+                        },
+                        "meta": {"values": {"cursor": ["undefined"]}},
+                    }
+                }
+            ),
+        }
+        async with AsyncSession(impersonate="chrome") as session:
+            response = await session.get(
+                url=PolloaiEndpoints.EXPLORER_ROOT, params=params
+            )
+        res_json = response.json()
+        data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+        metadata = {
+            "current_cursor": cursor,
+            "next_cursor": res_json[0]["result"]["data"]["json"]["nextCursor"],
+        }
+        return data, metadata

@@ -31,7 +31,7 @@
 
 class PolloaiEndpoints:
 
-    DOMAIN = "https://pollo.ai/api"
+    DOMAIN = "https://pollo.ai"
 
-    HOME_VIDEO=f"{DOMAIN}/trpc/video.trendingList"
+    EXPLORER_ROOT=f"{DOMAIN}/api/trpc/video.trendingList"
 

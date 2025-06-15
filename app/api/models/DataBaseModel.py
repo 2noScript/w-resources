@@ -27,11 +27,54 @@
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
 
+
 from pydantic import BaseModel
+from typing import Optional, List, Union
+from enum import Enum
 
 
-class BaseReqModel(BaseModel):
-    limit: int = 20
-    tag: str = "video"
-    sub_tag: str = "nature"
-    
+class DataType(Enum):
+    AI_GENERATOR = "ai_generator"
+    AI_AUDIO = "ai_audio"
+
+
+class MediaType(Enum):
+    VIDEO = "video"
+    AUDIO = "audio"
+    IMAGE = "image"
+
+
+class Video(BaseModel):
+    title: Optional[str] = None
+    thumbnail: Optional[str] = None
+    video_url: Optional[str] = None
+    video_url_nwm: Optional[str] = None
+    duration_ms: int = 0
+    keywork: List[str] = []
+    star: Optional[int] = None
+    share: Optional[int] = None
+
+
+class Audio(BaseModel):
+    title: str = ""
+    audio_url: Optional[str] = None
+    star: Optional[int] = None
+    duration_ms: int = 0
+
+
+class Image(BaseModel):
+    title: str = ""
+    image_url: str
+
+
+class Data(BaseModel):
+    id: Union[str, int]
+
+    data_type: DataType
+    media_type: List[MediaType]
+
+    prompt: Optional[str] = None
+    model: Optional[str] = None
+    video: Optional[Video] = None
+    audio: Optional[Audio] = None
+    image: Optional[Image] = None

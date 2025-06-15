@@ -1,0 +1,936 @@
+2025-06-14 18:46:50,444 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:46:50,581 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:46:50,723 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:47:05,815 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:47:06,137 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:47:06,289 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:47:28,287 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:47:28,409 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:47:28,534 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=0=%7B%27json%27%3A+%7B%27limit%27%3A+20%2C+%27score%27%3A+%27desc%27%2C+%27type%27%3A+%27video%27%2C+%27tag%27%3A+%27nature%27%2C+%27cursor%27%3A+None%7D%7D&meta=%7B%27values%27%3A+%7B%27cursor%27%3A+%5B%27undefined%27%5D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:48:06,207 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input={'0':%20{'json':%20{'limit':%2020,%20'score':%20'desc',%20'type':%20'video',%20'tag':%20'nature',%20'cursor':%20None}},%20'meta':%20{'values':%20{'cursor':%20['undefined']}}}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:48:06,759 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input={'0':%20{'json':%20{'limit':%2020,%20'score':%20'desc',%20'type':%20'video',%20'tag':%20'nature',%20'cursor':%20None}},%20'meta':%20{'values':%20{'cursor':%20['undefined']}}}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:48:06,980 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input={'0':%20{'json':%20{'limit':%2020,%20'score':%20'desc',%20'type':%20'video',%20'tag':%20'nature',%20'cursor':%20None}},%20'meta':%20{'values':%20{'cursor':%20['undefined']}}}: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:57:00,858 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=%7B%220%22%3A%7B%22json%22%3A%7B%22limit%22%3A20%2C%22score%22%3A%22desc%22%2C%22type%22%3A%22ai+effects%22%2C%22tag%22%3A%22AI+Twerk+Video+Generator%22%2C%22cursor%22%3Anull%7D%2C%22meta%22%3A%7B%22values%22%3A%7B%22cursor%22%3A%5B%22undefined%22%5D%7D%7D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:57:01,095 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=%7B%220%22%3A%7B%22json%22%3A%7B%22limit%22%3A20%2C%22score%22%3A%22desc%22%2C%22type%22%3A%22ai+effects%22%2C%22tag%22%3A%22AI+Twerk+Video+Generator%22%2C%22cursor%22%3Anull%7D%2C%22meta%22%3A%7B%22values%22%3A%7B%22cursor%22%3A%5B%22undefined%22%5D%7D%7D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:57:01,236 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=%7B%220%22%3A%7B%22json%22%3A%7B%22limit%22%3A20%2C%22score%22%3A%22desc%22%2C%22type%22%3A%22ai+effects%22%2C%22tag%22%3A%22AI+Twerk+Video+Generator%22%2C%22cursor%22%3Anull%7D%2C%22meta%22%3A%7B%22values%22%3A%7B%22cursor%22%3A%5B%22undefined%22%5D%7D%7D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 264, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 269, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:58:00,986 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=%7B%220%22%3A%7B%22json%22%3A%7B%22limit%22%3A20%2C%22score%22%3A%22desc%22%2C%22type%22%3A%22ai+effects%22%2C%22tag%22%3A%22AI+Twerk+Video+Generator%22%2C%22cursor%22%3Anull%7D%2C%22meta%22%3A%7B%22values%22%3A%7B%22cursor%22%3A%5B%22undefined%22%5D%7D%7D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 265, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 270, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:58:01,122 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=%7B%220%22%3A%7B%22json%22%3A%7B%22limit%22%3A20%2C%22score%22%3A%22desc%22%2C%22type%22%3A%22ai+effects%22%2C%22tag%22%3A%22AI+Twerk+Video+Generator%22%2C%22cursor%22%3Anull%7D%2C%22meta%22%3A%7B%22values%22%3A%7B%22cursor%22%3A%5B%22undefined%22%5D%7D%7D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 265, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 270, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-14 18:58:01,281 - app.http_client.AsyncHttpClient - ERROR - Failed to parse JSON from https://pollo.ai/api/trpc/video.trendingList?batch=1&input=%7B%220%22%3A%7B%22json%22%3A%7B%22limit%22%3A20%2C%22score%22%3A%22desc%22%2C%22type%22%3A%22ai+effects%22%2C%22tag%22%3A%22AI+Twerk+Video+Generator%22%2C%22cursor%22%3Anull%7D%2C%22meta%22%3A%7B%22values%22%3A%7B%22cursor%22%3A%5B%22undefined%22%5D%7D%7D%7D%7D: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 265, in parse_json
+    return response.json()
+           ^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/httpx/_models.py", line 832, in json
+    return jsonlib.loads(self.content, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/http_client/AsyncHttpClient.py", line 270, in parse_json
+    return json.loads(match.group())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/json/decoder.py", line 354, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-15 13:34:12,353 - app.api.routers.polloai_resource - ERROR - Error: 1 validation error for ResponseModel
+params
+  Input should be a valid dictionary [type=dict_type, input_value=PolloaiExplore(tag='ai ef...i', limit=20, cursor=''), input_type=PolloaiExplore]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+2025-06-15 13:34:12,356 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 66, in get_explore
+    return ResponseModel(router="polloai/explore", data=data,params=_PolloaiExplore)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ResponseModel
+params
+  Input should be a valid dictionary [type=dict_type, input_value=PolloaiExplore(tag='ai ef...i', limit=20, cursor=''), input_type=PolloaiExplore]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+
+2025-06-15 16:09:35,467 - app.api.routers.polloai_resource - ERROR - Error: object list can't be used in 'await' expression
+2025-06-15 16:09:35,473 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data = await polloai_crawler.fetch_explore(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 53, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 79, in fetch_explore
+    return await self.extract_data(response.json())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object list can't be used in 'await' expression
+
+2025-06-15 16:09:59,242 - app.api.routers.polloai_resource - ERROR - Error: object list can't be used in 'await' expression
+2025-06-15 16:09:59,246 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data = await polloai_crawler.fetch_explore(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 53, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 79, in fetch_explore
+    return await self.extract_data(await response.json())
+                                   ^^^^^^^^^^^^^^^^^^^^^
+TypeError: object list can't be used in 'await' expression
+
+2025-06-15 16:20:17,779 - app.api.routers.polloai_resource - ERROR - Error: list indices must be integers or slices, not str
+2025-06-15 16:20:17,781 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data, metadata = await polloai_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 57, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 87, in fetch_explore
+    "next_cursor": res_json[0]["result"]["data"]["json"]["data"]["cursor"],
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2025-06-15 16:20:46,788 - app.api.routers.polloai_resource - ERROR - Error: list indices must be integers or slices, not str
+2025-06-15 16:20:46,791 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data, metadata = await polloai_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 57, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 87, in fetch_explore
+    "next_cursor": res_json[0]["result"]["data"]["json"]["data"]["nextCursor"],
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not str
+
+2025-06-15 16:35:49,441 - app.api.routers.polloai_resource - ERROR - Error: 1 validation error for Video
+title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-06-15 16:35:49,450 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data, metadata = await polloai_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 76, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 103, in fetch_explore
+    data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 52, in extract_data
+    video = Video(
+            ^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Video
+title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+
+2025-06-15 16:36:32,773 - app.api.routers.polloai_resource - ERROR - Error: 1 validation error for Video
+title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-06-15 16:36:32,779 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data, metadata = await polloai_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 76, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 103, in fetch_explore
+    data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 52, in extract_data
+    video = Video(
+            ^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Video
+title
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+
+2025-06-15 16:38:36,850 - app.api.routers.polloai_resource - ERROR - Error: 'item'
+2025-06-15 16:38:36,853 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data, metadata = await polloai_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 76, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 103, in fetch_explore
+    data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 64, in extract_data
+    id=item["item"],
+       ~~~~^^^^^^^^
+KeyError: 'item'
+
+2025-06-15 16:39:21,046 - app.api.routers.polloai_resource - ERROR - Error: 2 validation errors for Data
+data_type
+  Input should be a valid list [type=list_type, input_value=<DataType.AI_GENERATOR: 'ai_generator'>, input_type=DataType]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+media_type
+  Input should be 'video', 'audio' or 'image' [type=enum, input_value=[<MediaType.VIDEO: 'video'>], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/enum
+2025-06-15 16:39:21,052 - app.api.routers.polloai_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/polloai_resource.py", line 60, in get_explore
+    data, metadata = await polloai_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 76, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 103, in fetch_explore
+    data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/polloai/crawler.py", line 63, in extract_data
+    Data(
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/pydantic/main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for Data
+data_type
+  Input should be a valid list [type=list_type, input_value=<DataType.AI_GENERATOR: 'ai_generator'>, input_type=DataType]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+media_type
+  Input should be 'video', 'audio' or 'image' [type=enum, input_value=[<MediaType.VIDEO: 'video'>], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/enum
+

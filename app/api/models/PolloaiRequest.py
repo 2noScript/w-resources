@@ -28,10 +28,13 @@
 # ==============================================================================
 
 
+from app.api.models.APIBaseModel import RequestModel
 from fastapi import Form
-from pydantic import HttpUrl
+from typing import Optional
 
 
-
-
-
+class PolloaiExplore(RequestModel):
+    cursor: str = Form(
+        default="",
+        description="The cursor of the resource",
+    )
