@@ -934,3 +934,102 @@ media_type
   Input should be 'video', 'audio' or 'image' [type=enum, input_value=[<MediaType.VIDEO: 'video'>], input_type=list]
     For further information visit https://errors.pydantic.dev/2.11/v/enum
 
+2025-06-15 16:47:03,563 - app.api.routers.pollo_resource - ERROR - Error: 'result'
+2025-06-15 16:47:03,566 - app.api.routers.pollo_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/pollo_resource.py", line 60, in get_explore
+    data, metadata = await pollo_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/pollo/crawler.py", line 76, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/pollo/crawler.py", line 103, in fetch_explore
+    data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+                             ~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'result'
+
+2025-06-15 16:48:23,360 - app.api.routers.pollo_resource - ERROR - Error: 'result'
+2025-06-15 16:48:23,361 - app.api.routers.pollo_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/pollo_resource.py", line 60, in get_explore
+    data, metadata = await pollo_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/pollo/crawler.py", line 76, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/pollo/crawler.py", line 103, in fetch_explore
+    data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+                             ~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'result'
+
+2025-06-15 16:49:00,694 - app.api.routers.pollo_resource - ERROR - Error: 'result'
+2025-06-15 16:49:00,696 - app.api.routers.pollo_resource - ERROR - Traceback (most recent call last):
+  File "/Users/2noscript/workspace/project/w-resources/app/api/routers/pollo_resource.py", line 60, in get_explore
+    data, metadata = await pollo_crawler.fetch_explore(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/pollo/crawler.py", line 76, in <lambda>
+    retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/.local/share/uv/python/cpython-3.12.10-macos-aarch64-none/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/2noscript/workspace/project/w-resources/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/2noscript/workspace/project/w-resources/app/crawlers/platforms/pollo/crawler.py", line 104, in fetch_explore
+    data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
+                             ~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'result'
+

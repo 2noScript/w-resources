@@ -29,18 +29,18 @@
 
 
 from app.api.models.DataBaseModel import Data, DataType, MediaType, Video
-from app.crawlers.platforms.polloai.endpoints import PolloaiEndpoints
+from app.crawlers.platforms.pollo.endpoints import PolloEndpoints
 from config.settings import Settings
 from tenacity import retry, stop_after_attempt, wait_fixed
 from app.utils.serializers_utils import class_to_dict
-from app.crawlers.platforms.polloai.tags import Tags
+from app.crawlers.platforms.pollo.tags import Tags
 from typing import Optional
 from curl_cffi import AsyncSession
 from typing import Optional, List
 import json
 
 
-class PolloAiCrawler:
+class PolloCrawler:
 
     def fetch_tags(self):
         return class_to_dict(Tags)
@@ -97,7 +97,7 @@ class PolloAiCrawler:
         }
         async with AsyncSession(impersonate="chrome") as session:
             response = await session.get(
-                url=PolloaiEndpoints.EXPLORER_ROOT, params=params
+                url=PolloEndpoints.EXPLORER_ROOT, params=params
             )
         res_json = response.json()
         data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])

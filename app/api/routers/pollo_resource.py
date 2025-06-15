@@ -33,11 +33,11 @@ from typing import Union
 from fastapi import Request, APIRouter, HTTPException, Form, status
 from app.api.models.PolloaiRequest import PolloaiExplore
 from app.utils.logging_utils import configure_logging
-from app.crawlers.platforms.polloai.crawler import PolloAiCrawler
+from app.crawlers.platforms.pollo.crawler import PolloCrawler
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
 
 
-polloai_crawler = PolloAiCrawler()
+pollo_crawler = PolloCrawler()
 
 router = APIRouter()
 
@@ -46,7 +46,7 @@ logger = configure_logging(name=__name__)
 
 @router.get("/tags", response_model=ResponseModel)
 async def get_tags() -> Union[ResponseModel, ErrorResponseModel]:
-    return ResponseModel(router="polloai/tags", data=polloai_crawler.fetch_tags())
+    return ResponseModel(router="polloai/tags", data=pollo_crawler.fetch_tags())
 
 
 @router.post(
@@ -57,7 +57,7 @@ async def get_explore(
     _PolloaiExplore: PolloaiExplore = Form(...),
 ) -> Union[ResponseModel, ErrorResponseModel]:
     try:
-        data, metadata = await polloai_crawler.fetch_explore(
+        data, metadata = await pollo_crawler.fetch_explore(
             tag=_PolloaiExplore.tag,
             sub_tag=_PolloaiExplore.sub_tag,
             limit=_PolloaiExplore.limit,

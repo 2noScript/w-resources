@@ -29,7 +29,7 @@
 
 
 
-class PolloaiEndpoints:
+class PolloEndpoints:
 
     DOMAIN = "https://pollo.ai"
 

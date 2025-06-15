@@ -78,8 +78,8 @@ class Settings:
         #  Log file backup count
         backup_count: int = 7
 
-    class PolloaiSettings:
+    class PolloSettings:
         # Polloai Web Cookie
-        cookie: str = os.getenv("POLLOAI_COOKIE", "")
+        cookie: str = os.getenv("POLLO_COOKIE", "")
         # Polloai Proxy
-        proxy: str = os.getenv("POLLOAI_PROXY", None)
+        proxy: str = os.getenv("POLLO_PROXY", None)
