@@ -1,10 +1,10 @@
 ### Resources
 
-| Platform                             | logo | type           | media   | status        | docs                                                       |
-| ------------------------------------ | ---- | -------------- | ------- | ------------- | ---------------------------------------------------------- |
-| <a href="https://pollo.ai">Pollo</a> |      | `ai_generator` | `video` | `coming soon` | <a href="/app/crawlers/platforms/polloai/README.md">📄</a> |
-|                                      |      |                |         |               |                                                            |
-|                                      |      |                |         |               |                                                            |
+| Platform                                       | logo | type           | media           | status        | docs                                                       |
+| ---------------------------------------------- | ---- | -------------- | --------------- | ------------- | ---------------------------------------------------------- |
+| <a href="https://pollo.ai">Pollo</a>           |      | `ai_generator` | `video`         | `coming soon` | <a href="/app/crawlers/platforms/pollo/README.md">📄</a>   |
+| <a href="https://www.promeai.pro/">Promeai</a> |      | `ai_generator` | `video`,`image` | `coming soon` | <a href="/app/crawlers/platforms/promeai/README.md">📄</a> |
+|                                                |      |                |                 |               |                                                            |
 
 ### Structure
 
