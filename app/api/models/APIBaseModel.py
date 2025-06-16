@@ -34,7 +34,6 @@ from pydantic import BaseModel, Field
 from fastapi import Form
 
 
-
 class RequestModel(BaseModel):
     tag: str = Form(
         default="",
@@ -56,25 +55,20 @@ class RequestModel(BaseModel):
 # Create a common response model
 class ResponseModel(BaseModel):
     code: int = Field(default=200, description="HTTP status code")
-    router: str = Field(
-        default="",
-        description="The endpoint that generated this response ",
-    )
     params: Optional[Dict[str, Any]] = Field(
         default_factory=dict,
         description="The parameters used in the request ",
     )
     data: Optional[Any] = Field(default=None, description="The response data")
-    
-    metadata:Optional[dict] = Field(default_factory=dict,description="The continuation metadata")
 
-    
+    metadata: Optional[dict] = Field(
+        default_factory=dict, description="The continuation metadata"
+    )
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "code": 200,
-                "router": "/example/endpoint",
                 "params": {"query": "example"},
                 "data": {"key": "value"},
             }
@@ -92,24 +86,17 @@ class ErrorResponseModel(BaseModel):
         default_factory=lambda: datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         description="The time the error occurred ",
     )
-    router: str = Field(
-        default="",
-        description="The endpoint that generated this response",
-    )
     params: Optional[Dict[str, Any]] = Field(
         default_factory=dict,
         description="The parameters used in the request",
     )
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "code": 400,
                 "message": "Invalid request parameters.",
                 "time": "2025-10-27 14:30:00",
-                "router": "/example/endpoint",
                 "params": {"param1": "invalid"},
             }
         }
-
-

@@ -38,4 +38,4 @@ router = APIRouter()
 router.include_router(health_check.router, prefix="/health", tags=["Health-Check"])
 
 # Polloai Resource
-router.include_router(pollo_resource.router, prefix="/polloai", tags=["Polloai-Resource"])
+router.include_router(pollo_resource.router, prefix="/polloai", tags=["Pollo"])

@@ -41,7 +41,7 @@ logger = configure_logging(name=__name__)
 # API Tags
 tags_metadata = [
     {"name": "Health-Check", "description": "**Server Health Check**"},
-    {"name": "Polloai-Resource", "description": "Resources created by artificial intelligence"},
+    {"name": "Pollo", "description": "Resources created by artificial intelligence"},
 ]
 
 

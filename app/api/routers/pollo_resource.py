@@ -30,7 +30,7 @@
 
 import traceback
 from typing import Union
-from fastapi import Request, APIRouter, HTTPException, Form, status
+from fastapi import APIRouter, Form, status
 from app.api.models.PolloRequest import PolloaiExplore
 from app.utils.logging_utils import configure_logging
 from app.crawlers.platforms.pollo.crawler import PolloCrawler
@@ -46,7 +46,7 @@ logger = configure_logging(name=__name__)
 
 @router.get("/tags", response_model=ResponseModel)
 async def get_tags() -> Union[ResponseModel, ErrorResponseModel]:
-    return ResponseModel(router="polloai/tags", data=pollo_crawler.fetch_tags())
+    return ResponseModel(data=pollo_crawler.fetch_tags())
 
 
 @router.post(
@@ -64,7 +64,6 @@ async def get_explore(
             cursor=_PolloaiExplore.cursor,
         )
         return ResponseModel(
-            router="polloai/explore",
             params=_PolloaiExplore.model_dump(),
             data=data,
             metadata=metadata,
@@ -73,12 +72,6 @@ async def get_explore(
         logger.error(f"Error: {e}")
         logger.error(traceback.format_exc())
         return ErrorResponseModel(
-            router="polloai/explore",
             error_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             error_message=str(e),
         )
-
-
-# @router.post("/audio")
-# async def get_audio_list():
-#     return {}
