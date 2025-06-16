@@ -31,7 +31,7 @@
 import traceback
 from typing import Union
 from fastapi import Request, APIRouter, HTTPException, Form, status
-from app.api.models.PolloaiRequest import PolloaiExplore
+from app.api.models.PolloRequest import PolloaiExplore
 from app.utils.logging_utils import configure_logging
 from app.crawlers.platforms.pollo.crawler import PolloCrawler
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel

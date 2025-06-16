@@ -83,3 +83,4 @@ class Settings:
         cookie: str = os.getenv("POLLO_COOKIE", "")
         # Polloai Proxy
         proxy: str = os.getenv("POLLO_PROXY", None)
+
