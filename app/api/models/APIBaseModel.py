@@ -59,7 +59,7 @@ class ResponseModel(BaseModel):
         default_factory=dict,
         description="The parameters used in the request ",
     )
-    data: Optional[Any] = Field(default=None, description="The response data")
+    data: Optional[Any] = Field( description="The response data")
 
     metadata: Optional[dict] = Field(
         default_factory=dict, description="The continuation metadata"

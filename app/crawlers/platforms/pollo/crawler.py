@@ -31,9 +31,9 @@
 from app.api.models.DataBaseModel import Data, DataType, MediaType, Video
 from app.crawlers.platforms.pollo.endpoints import PolloEndpoints
 from config.settings import Settings
-from tenacity import retry, stop_after_attempt, wait_fixed
+from tenacity import retry, stop_after_attempt
 from app.utils.serializers_utils import class_to_dict
-from app.crawlers.platforms.pollo.tags import Tags
+from app.crawlers.platforms.pollo.tags import PolloTags
 from typing import Optional
 from curl_cffi import AsyncSession
 from typing import Optional, List
@@ -43,7 +43,10 @@ import json
 class PolloCrawler:
 
     def fetch_tags(self):
-        return class_to_dict(Tags)
+        return {
+            "tags": PolloTags,
+            "count": len(PolloTags),
+        }
 
     def extract_data(self, raw_data) -> List[Data]:
         data: List[Data] = []

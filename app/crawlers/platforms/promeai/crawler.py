@@ -26,12 +26,3 @@
 #                      \          \
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
-
-from pydantic import BaseModel
-
-
-class BaseReqModel(BaseModel):
-    limit: int = 20
-    tag: str = "video"
-    sub_tag: str = "nature"
-    

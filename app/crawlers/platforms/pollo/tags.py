@@ -28,124 +28,50 @@
 # ==============================================================================
 
 
-class Tags:
-
-    class Video:
-        name = "Videos"
-        value = "video"
-
-        class Nature:
-            name = "Nature"
-            value = "nature"
-
-        class VibrantColors:
-            name = "Vibrant Colors"
-            value = "vibrant colors"
-
-        class Adventure:
-            name = "Adventure"
-            value = "adventure"
-
-        class Playful:
-            name = "Playful"
-            value = "playful"
-
-        class Passion:
-            name = "Passion"
-            value = "passion"
-
-        class Humor:
-            name = "Humor"
-            value = "humor"
-
-        class Wildlife:
-            name = "Wildlife"
-            value = "wildlife"
-
-        class Futuristic:
-            name = "Futuristic"
-            value = "futuristic"
-
-        class Sunset:
-            name = "Sunset"
-            value = "sunset"
-
-    class AIEffects:
-        name = "AI Effects"
-        value = "ai effects"
-
-        class AIKissing:
-            name = "AI Kissing"
-            value = "AI Kissing Video Generator"
-
-        class AIHug:
-            name = "AI Hug"
-            value = "AI Hug"
-
-        class AITwerk:
-            name = "AI Twerk"
-            value = "AI Twerk Video Generator"
-
-        class AIBikini:
-            name = "AI Bikini"
-            value = "AI Bikini"
-
-        class AIMuscle:
-            name = "AI Muscle"
-            value = "AI Muscle Generator"
-
-        class AIFlying:
-            name = "AI Flying"
-            value = "AI Flying Video Generator"
-
-        class AIGenderSwap:
-            name = "AI Gender Swap"
-            value = "AI Gender Swap Video Generator"
-
-        class AIFrenchKissing:
-            name = "AI French Kissing"
-            value = "AI French Kissing"
-
-        class AIJiggleVideoEffect:
-            name = "AI Jiggle Video Effect"
-            value = "AI Jiggle Video Effect"
-
-    class Anime:
-        name = "Anime"
-        value = "anime"
-
-        class Adventure:
-            name = "Adventure"
-            value = "adventure"
-
-        class VibrantColors:
-            name = "Vibrant Colors"
-            value = "vibrant colors"
-
-        class Nature:
-            name = "Nature"
-            value = "nature"
-
-        class Friendship:
-            name = "Friendship"
-            value = "friendship"
-
-        class Animation:
-            name = "Animation"
-            value = "animation"
-
-        class Fantasy:
-            name = "Fantasy"
-            value = "fantasy"
-
-        class Colorful:
-            name = "Colorful"
-            value = "colorful"
-
-        class Playful:
-            name = "Playful"
-            value = "playful"
-
-        class Humor:
-            name = "Humor"
-            value = "humor"
+PolloTags = [
+    {
+        "name": "Videos",
+        "value": "video",
+        "subtags": [
+            {"name": "Nature", "value": "nature"},
+            {"name": "Vibrant Colors", "value": "vibrant colors"},
+            {"name": "Adventure", "value": "adventure"},
+            {"name": "Playful", "value": "playful"},
+            {"name": "Passion", "value": "passion"},
+            {"name": "Humor", "value": "humor"},
+            {"name": "Wildlife", "value": "wildlife"},
+            {"name": "Futuristic", "value": "futuristic"},
+            {"name": "Sunset", "value": "sunset"},
+        ],
+    },
+    {
+        "name": "AI Effects",
+        "value": "ai effects",
+        "subtags": [
+            {"name": "AI Kissing", "value": "AI Kissing Video Generator"},
+            {"name": "AI Hug", "value": "AI Hug"},
+            {"name": "AI Twerk", "value": "AI Twerk Video Generator"},
+            {"name": "AI Bikini", "value": "AI Bikini"},
+            {"name": "AI Muscle", "value": "AI Muscle Generator"},
+            {"name": "AI Flying", "value": "AI Flying Video Generator"},
+            {"name": "AI Gender Swap", "value": "AI Gender Swap Video Generator"},
+            {"name": "AI French Kissing", "value": "AI French Kissing"},
+            {"name": "AI Jiggle Video Effect", "value": "AI Jiggle Video Effect"},
+        ],
+    },
+    {
+        "name": "Anime",
+        "value": "anime",
+        "subtags": [
+            {"name": "Adventure", "value": "adventure"},
+            {"name": "Vibrant Colors", "value": "vibrant colors"},
+            {"name": "Nature", "value": "nature"},
+            {"name": "Friendship", "value": "friendship"},
+            {"name": "Animation", "value": "animation"},
+            {"name": "Fantasy", "value": "fantasy"},
+            {"name": "Colorful", "value": "colorful"},
+            {"name": "Playful", "value": "playful"},
+            {"name": "Humor", "value": "humor"},
+        ],
+    },
+]
