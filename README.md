@@ -1,10 +1,11 @@
 ### Resources
 
-| Platform                                       | logo | type           | media           | status        | docs                                                       |
-| ---------------------------------------------- | ---- | -------------- | --------------- | ------------- | ---------------------------------------------------------- |
-| <a href="https://pollo.ai">Pollo</a>           |      | `ai_generator` | `video`         | `coming soon` | <a href="/app/crawlers/platforms/pollo/README.md">📄</a>   |
-| <a href="https://www.promeai.pro/">Promeai</a> |      | `ai_generator` | `video`,`image` | `coming soon` | <a href="/app/crawlers/platforms/promeai/README.md">📄</a> |
-|                                                |      |                |                 |               |                                                            |
+| Platform                                   | logo | type           | media                   | status        | docs                                                       |
+| ------------------------------------------ | ---- | -------------- | ----------------------- | ------------- | ---------------------------------------------------------- |
+| <a href="https://pollo.ai">Pollo</a>       |      | `ai_generator` | `video`                 | `coming soon` | <a href="/app/crawlers/platforms/pollo/README.md">📄</a>   |
+| <a href="https://promeai.pro/">Promeai</a> |      | `ai_generator` | `video`,`image`         | `coming soon` | <a href="/app/crawlers/platforms/promeai/README.md">📄</a> |
+| <a href="https://seaart.ai">Seaart</a>     |      | `ai_generator` | `video`,`image`,`audio` | `coming soon` | <a href="/app/crawlers/platforms/seaart/README.md">📄</a>  |
+| <a href="https://vidu.com">Vidu</a>        |      | `ai_generator` | `video`,`image`         | `coming soon` | <a href="/app/crawlers/platforms/vidu/README.md">📄</a>    |
 
 ### Structure
 
