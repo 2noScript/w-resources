@@ -72,6 +72,6 @@ async def get_explore(
         logger.error(f"Error: {e}")
         logger.error(traceback.format_exc())
         return ErrorResponseModel(
-            error_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            error_message=str(e),
+            code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            message=str(e),
         )

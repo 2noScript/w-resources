@@ -28,11 +28,10 @@
 # ==============================================================================
 
 
-from app.api.models.DataBaseModel import Data, DataType, MediaType, Video
+from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video
 from app.crawlers.platforms.pollo.endpoints import PolloEndpoints
 from config.settings import Settings
 from tenacity import retry, stop_after_attempt
-from app.utils.serializers_utils import class_to_dict
 from app.crawlers.platforms.pollo.tags import PolloTags
 from typing import Optional
 from curl_cffi import AsyncSession
@@ -48,8 +47,8 @@ class PolloCrawler:
             "count": len(PolloTags),
         }
 
-    def extract_data(self, raw_data) -> List[Data]:
-        data: List[Data] = []
+    def extract_data(self, raw_data) -> List[ExploreData]:
+        data: List[ExploreData] = []
         for item in raw_data:
             if item["mediaType"] == "video":
                 video = Video(
@@ -63,7 +62,7 @@ class PolloCrawler:
                     share=item["shareNum"],
                 )
                 data.append(
-                    Data(
+                    ExploreData(
                         id=item["videoId"],
                         prompt=item["generateRecord"]["prompt"],
                         data_type=DataType.AI_GENERATOR,
@@ -102,6 +101,11 @@ class PolloCrawler:
             response = await session.get(
                 url=PolloEndpoints.EXPLORER_ROOT, params=params
             )
+        if response.status_code != 200:
+            raise Exception({
+                "crawl_status":response.status_code,
+                "crawl_message":response.text
+            })
         res_json = response.json()
         data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
         metadata = {

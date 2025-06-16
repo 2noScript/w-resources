@@ -67,7 +67,7 @@ class Image(BaseModel):
     image_url: str
 
 
-class Data(BaseModel):
+class ExploreData(BaseModel):
     id: Union[str, int]
 
     data_type: DataType
@@ -76,5 +76,12 @@ class Data(BaseModel):
     prompt: Optional[str] = None
     model: Optional[str] = None
     video: Optional[Video] = None
-    audio: Optional[Audio] = None
     image: Optional[Image] = None
+
+
+class AudioData(BaseModel):
+    id: Union[str, int]
+    data_type: DataType
+    prompt: Optional[str] = None
+    model: Optional[str] = None
+    audio: Audio
