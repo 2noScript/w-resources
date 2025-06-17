@@ -26,3 +26,23 @@
 #                      \          \
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
+
+
+from app.crawlers.platforms.promeai.tags import PromeaiTags
+
+
+class PromeaiCrawler:
+
+    def fetch_tags(self):
+        return {
+            "tags": PromeaiTags,
+            "count": len(PromeaiTags),
+        }
+    
+    async def fetch_explore(self, tag: str, sub_tag: str, limit: int = 20, cursor: str = None):
+        return {
+            "tag": tag,
+            "sub_tag": sub_tag,
+            "limit": limit,
+            "cursor": cursor,
+        }

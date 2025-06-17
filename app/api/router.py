@@ -28,7 +28,7 @@
 # ===============================================================================
 
 from fastapi import APIRouter
-from app.api.routers import health_check, pollo_resource
+from app.api.routers import health_check, pollo_resource, promeai_resource
 
 
 router = APIRouter()
@@ -39,3 +39,6 @@ router.include_router(health_check.router, prefix="/health", tags=["Health-Check
 
 # Polloai Resource
 router.include_router(pollo_resource.router, prefix="/polloai", tags=["Pollo"])
+
+# Promeai Resource
+router.include_router(promeai_resource.router, prefix="/promeai", tags=["Promeai"])

@@ -51,6 +51,11 @@ class RequestModel(BaseModel):
         example=20,
     )
 
+    cursor: str = Form(
+        default="",
+        description="The cursor of the resource",
+    )
+
 
 # Create a common response model
 class ResponseModel(BaseModel):
@@ -59,7 +64,7 @@ class ResponseModel(BaseModel):
         default_factory=dict,
         description="The parameters used in the request ",
     )
-    data: Optional[Any] = Field( description="The response data")
+    data: Optional[Any] = Field(description="The response data")
 
     metadata: Optional[dict] = Field(
         default_factory=dict, description="The continuation metadata"

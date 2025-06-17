@@ -87,4 +87,12 @@ class Settings:
         version: str = "0.0.1"
 
 
+    class PromeaiSettings:
+        # Promeai Web Cookie
+        cookie: str = os.getenv("PROMEAi_COOKIE", "")
+        # Promeai Proxy
+        proxy: str = os.getenv("PROMEAi_PROXY", None)
+
+        version: str = "0.0.1"
+
 
