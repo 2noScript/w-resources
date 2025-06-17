@@ -49,11 +49,14 @@ class Video(BaseModel):
     thumbnail: Optional[str] = None
     video_url: Optional[str] = None
     video_url_nwm: Optional[str] = None
-    duration_ms: int = 0
+    duration_ms: Optional[int] = None
     keywork: List[str] = []
+    video_ratio: Optional[str] = None
+    width: Optional[int] = None
+    height: Optional[int] = None
     star: Optional[int] = None
     share: Optional[int] = None
-    video_ratio: Optional[str] = None
+    downloaded: Optional[int] = None
 
 
 class Audio(BaseModel):

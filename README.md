@@ -22,7 +22,7 @@ uv run -m start
 
 | Platform                           | logo                                                                  | type                       | media                   | version       | docs                                             |
 | ---------------------------------- | --------------------------------------------------------------------- | -------------------------- | ----------------------- | ------------- | ------------------------------------------------ |
-| [Pollo](https://pollo.ai)          | <img src="github/imgs_platform/pollo.ico" width="24" height="24"/>    | `ai_generator`             | `video`                 | `0.0.1`       | [📄](/app/crawlers/platforms/pollo/README.md)    |
+| [Pollo](https://pollo.ai)          | <img src="github/imgs_platform/pollo.ico" width="24" height="24"/>    | `ai_generator`             | `video`                 | `0.0.2`       | [📄](/app/crawlers/platforms/pollo/README.md)    |
 | [Promeai](https://promeai.pro)     | <img src="github/imgs_platform/promeai.ico" width="24" height="24"/>  | `ai_generator`             | `video`,`image`         | `coming soon` | [📄](/app/crawlers/platforms/promeai/README.md)  |
 | [Seaart](https://seaart.ai)        | <img src="github/imgs_platform/seaart.ico" width="24" height="24"/>   | `ai_generator`,`ai_audio`  | `video`,`image`,`audio` | `coming soon` | [📄](/app/crawlers/platforms/seaart/README.md)   |
 | [Vidu](https://vidu.com)           | <img src="github/imgs_platform/vidu.ico" width="24" height="24"/>     | `ai_generator`             | `video`,`image`         | `coming soon` | [📄](/app/crawlers/platforms/vidu/README.md)     |

@@ -37,7 +37,7 @@ from typing import Optional
 from curl_cffi import AsyncSession
 from typing import Optional, List
 import json
-    
+
 
 class PolloCrawler:
 
@@ -51,6 +51,7 @@ class PolloCrawler:
         data: List[ExploreData] = []
         for item in raw_data:
             if item["mediaType"] == "video":
+                video_meta = item.get("generateRecord", {}).get("generateRecord", {})
                 video = Video(
                     title=item["title"],
                     thumbnail=item["cover"],
@@ -61,17 +62,21 @@ class PolloCrawler:
                     star=item["starNum"],
                     share=item["shareNum"],
                     video_ratio=item["videoRatio"],
+                    downloaded=item["downloadNum"]
                 )
+                if video_meta:
+                    video.width = video_meta.get("width", None)
+                    video.height = video_meta.get("height", None)
                 data.append(
                     ExploreData(
                         id=item["videoId"],
+                        model=item["generateRecord"]["generationConfig"]["configType"],
                         prompt=item["generateRecord"]["prompt"],
                         data_type=DataType.AI_GENERATOR,
                         media_type=[MediaType.VIDEO],
                         video=video,
                     )
                 )
-
         return data
 
     @retry(
@@ -97,15 +102,16 @@ class PolloCrawler:
                 }
             ),
         }
-        async with AsyncSession(impersonate="chrome",proxy=Settings.PolloSettings.proxy) as session:
+        async with AsyncSession(
+            impersonate="chrome", proxy=Settings.PolloSettings.proxy
+        ) as session:
             response = await session.get(
                 url=PolloEndpoints.EXPLORER_ROOT, params=params
             )
         if response.status_code != 200:
-            raise Exception({
-                "crawl_status":response.status_code,
-                "crawl_message":response.text
-            })
+            raise Exception(
+                {"crawl_status": response.status_code, "crawl_message": response.text}
+            )
         res_json = response.json()
         data = self.extract_data(res_json[0]["result"]["data"]["json"]["data"])
         metadata = {
