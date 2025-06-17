@@ -12,6 +12,12 @@ uv sync
 uv run -m start
 ```
 
+## APi docs
+
+
+- http://0.0.0.0/docs
+
+
 ## Resources
 
 | Platform                           | logo                                                                  | type                       | media                   | version       | docs                                             |
