@@ -53,6 +53,7 @@ class Video(BaseModel):
     keywork: List[str] = []
     star: Optional[int] = None
     share: Optional[int] = None
+    video_ratio: Optional[str] = None
 
 
 class Audio(BaseModel):

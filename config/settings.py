@@ -84,3 +84,7 @@ class Settings:
         # Polloai Proxy
         proxy: str = os.getenv("POLLO_PROXY", None)
 
+        version: str = "0.0.1"
+
+
+

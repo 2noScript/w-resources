@@ -35,6 +35,7 @@ from app.api.models.PolloRequest import PolloaiExplore
 from app.utils.logging_utils import configure_logging
 from app.crawlers.platforms.pollo.crawler import PolloCrawler
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
+from config.settings import Settings
 
 
 pollo_crawler = PolloCrawler()
@@ -46,7 +47,7 @@ logger = configure_logging(name=__name__)
 
 @router.get("/tags", response_model=ResponseModel)
 async def get_tags() -> Union[ResponseModel, ErrorResponseModel]:
-    return ResponseModel(data=pollo_crawler.fetch_tags())
+    return ResponseModel(data=pollo_crawler.fetch_tags(),version=Settings.PolloSettings.version)
 
 
 @router.post(
@@ -67,6 +68,7 @@ async def get_explore(
             params=_PolloaiExplore.model_dump(),
             data=data,
             metadata=metadata,
+            version=Settings.PolloSettings.version
         )
     except Exception as e:
         logger.error(f"Error: {e}")
@@ -74,4 +76,5 @@ async def get_explore(
         return ErrorResponseModel(
             code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             message=str(e),
+            version=Settings.PolloSettings.version
         )

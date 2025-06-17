@@ -1,62 +1,25 @@
-### Resources
+## Installation
 
-| Platform                                      | logo | type                       | media                   | status        | docs                                                        |
-| --------------------------------------------- | ---- | -------------------------- | ----------------------- | ------------- | ----------------------------------------------------------- |
-| <a href="https://pollo.ai">Pollo</a>          |      | `ai_generator`             | `video`                 | `coming soon` | <a href="/app/crawlers/platforms/pollo/README.md">📄</a>    |
-| <a href="https://promeai.pro/">Promeai</a>    |      | `ai_generator`             | `video`,`image`         | `coming soon` | <a href="/app/crawlers/platforms/promeai/README.md">📄</a>  |
-| <a href="https://seaart.ai">Seaart</a>        |      | `ai_generator`,`ai_audio`  | `video`,`image`,`audio` | `coming soon` | <a href="/app/crawlers/platforms/seaart/README.md">📄</a>   |
-| <a href="https://vidu.com">Vidu</a>           |      | `ai_generator`             | `video`,`image`         | `coming soon` | <a href="/app/crawlers/platforms/vidu/README.md">📄</a>     |
-| <a href="https://artlist.io">Artlist</a>      |      | `ai_generator`,`ai_audio`  | `video`,`image`,`audio` | `coming soon` | <a href="/app/crawlers/platforms/artlist/README.md">📄</a>  |
-| <a href="https://hailuoai.video">Hailuoai</a> |      | `ai_generator`,            | `video`,`image`,        | `coming soon` | <a href="/app/crawlers/platforms/hailuoai/README.md">📄</a> |
-| <a href="https://app.klingai.com">Klingai</a> |      | `ai_generator`, `ai_audio` | `video`,`image`,        | `coming soon` | <a href="/app/crawlers/platforms/hailuoai/README.md">📄</a> |
-
-### Structure
-
-```shell
-├── README.md
-├── app
-│   ├── api
-│   │   ├── models
-│   │   │   ├── APIBaseModel.py
-│   │   │   ├── DataBaseModel.py
-│   │   │   └── PolloRequest.py
-│   │   ├── router.py
-│   │   └── routers
-│   │       ├── health_check.py
-│   │       └── pollo_resource.py
-│   ├── crawlers
-│   │   ├── README.md
-│   │   └── platforms
-│   │       ├── pollo
-│   │       │   ├── README.md
-│   │       │   ├── crawler.py
-│   │       │   ├── endpoints.py
-│   │       │   ├── models.py
-│   │       │   └── tags.py
-│   │       └── promeai
-│   │           └── README.md
-│   ├── database
-│   │   └── models
-│   ├── http_client
-│   │   └── HttpException.py
-│   ├── main.py
-│   ├── services
-│   │   └── callback_service.py
-│   └── utils
-│       ├── logging_utils.py
-│       └── serializers_utils.py
-├── config
-│   └── settings.py
-├── github
-├── pyproject.toml
-├── scripts
-├── start.py
-├── tests
-│   ├── integration
-│   │   └── test_endpoints.py
-│   ├── raw
-│   │   └── index.html
-│   └── unit
-└── uv.lock
-
+```bash
+git clone git@github.com:2noScript/w-resources.git
+cd w-resources
+uv sync
 ```
+
+## Usage
+
+```bash
+uv run -m start
+```
+
+## Resources
+
+| Platform                           | logo                                                                  | type                       | media                   | version       | docs                                             |
+| ---------------------------------- | --------------------------------------------------------------------- | -------------------------- | ----------------------- | ------------- | ------------------------------------------------ |
+| [Pollo](https://pollo.ai)          | <img src="github/imgs_platform/pollo.ico" width="24" height="24"/>    | `ai_generator`             | `video`                 | `0.0.1`       | [📄](/app/crawlers/platforms/pollo/README.md)    |
+| [Promeai](https://promeai.pro)     | <img src="github/imgs_platform/promeai.ico" width="24" height="24"/>  | `ai_generator`             | `video`,`image`         | `coming soon` | [📄](/app/crawlers/platforms/promeai/README.md)  |
+| [Seaart](https://seaart.ai)        | <img src="github/imgs_platform/seaart.ico" width="24" height="24"/>   | `ai_generator`,`ai_audio`  | `video`,`image`,`audio` | `coming soon` | [📄](/app/crawlers/platforms/seaart/README.md)   |
+| [Vidu](https://vidu.com)           | <img src="github/imgs_platform/vidu.ico" width="24" height="24"/>     | `ai_generator`             | `video`,`image`         | `coming soon` | [📄](/app/crawlers/platforms/vidu/README.md)     |
+| [Artlist](https://artlist.io)      | <img src="github/imgs_platform/artlist.ico" width="24" height="24"/>  | `ai_generator`,`ai_audio`  | `video`,`image`,`audio` | `coming soon` | [📄](/app/crawlers/platforms/artlist/README.md)  |
+| [Hailuoai](https://hailuoai.video) | <img src="github/imgs_platform/hailuoai.ico" width="24" height="24"/> | `ai_generator`,            | `video`,`image`,        | `coming soon` | [📄](/app/crawlers/platforms/hailuoai/README.md) |
+| [Klingai](https://app.klingai.com) | <img src="github/imgs_platform/klingai.ico" width="24" height="24"/>  | `ai_generator`, `ai_audio` | `video`,`image`,        | `coming soon` | [📄](/app/crawlers/platforms/klingai/README.md)  |

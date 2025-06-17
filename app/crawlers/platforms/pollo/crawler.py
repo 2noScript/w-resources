@@ -37,7 +37,7 @@ from typing import Optional
 from curl_cffi import AsyncSession
 from typing import Optional, List
 import json
-
+    
 
 class PolloCrawler:
 
@@ -60,6 +60,7 @@ class PolloCrawler:
                     keywork=item["tags"],
                     star=item["starNum"],
                     share=item["shareNum"],
+                    video_ratio=item["videoRatio"],
                 )
                 data.append(
                     ExploreData(
@@ -92,12 +93,11 @@ class PolloCrawler:
                             "tag": sub_tag,
                             "cursor": cursor,
                         },
-                        "meta": {"values": {"cursor": ["undefined"]}},
                     }
                 }
             ),
         }
-        async with AsyncSession(impersonate="chrome") as session:
+        async with AsyncSession(impersonate="chrome",proxy=Settings.PolloSettings.proxy) as session:
             response = await session.get(
                 url=PolloEndpoints.EXPLORER_ROOT, params=params
             )

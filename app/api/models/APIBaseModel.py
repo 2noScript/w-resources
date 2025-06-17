@@ -65,12 +65,18 @@ class ResponseModel(BaseModel):
         default_factory=dict, description="The continuation metadata"
     )
 
+    version: str = Field(
+        default="0.0.1",
+        description="The version of the API",
+    )
+
     class Config:
         json_schema_extra = {
             "example": {
                 "code": 200,
                 "params": {"query": "example"},
                 "data": {"key": "value"},
+                "version": "0.0.1",
             }
         }
 
@@ -90,6 +96,10 @@ class ErrorResponseModel(BaseModel):
         default_factory=dict,
         description="The parameters used in the request",
     )
+    version: str = Field(
+        default="0.0.1",
+        description="The version of the API",
+    )
 
     class Config:
         json_schema_extra = {
@@ -98,5 +108,6 @@ class ErrorResponseModel(BaseModel):
                 "message": "Invalid request parameters.",
                 "time": "2025-10-27 14:30:00",
                 "params": {"param1": "invalid"},
+                "version": "0.0.1",
             }
         }
