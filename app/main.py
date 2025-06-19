@@ -43,6 +43,7 @@ tags_metadata = [
     {"name": "Health-Check", "description": "**Server Health Check**"},
     {"name": "Pollo", "description": "Resources created by artificial intelligence"},
     {"name": "Promeai", "description": "Resources created by artificial intelligence"},
+    {"name": "Seaart", "description": "Resources created by artificial intelligence"},
 ]
 
 

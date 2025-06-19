@@ -26,3 +26,8 @@
 #                      \          \
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
+
+
+class SeaartEndpoints:
+    DOMAIN="https://www.seaart.ai"
+    TAGS_ROOT = "https://seaart.ai/api/collections"

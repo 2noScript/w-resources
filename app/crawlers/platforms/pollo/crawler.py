@@ -29,9 +29,9 @@
 
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video
+from app.crawlers.BaseCrawler import BaseCrawler
 from app.crawlers.platforms.pollo.endpoints import PolloEndpoints
 from config.settings import Settings
-from tenacity import retry, stop_after_attempt
 from app.crawlers.platforms.pollo.tags import PolloTags
 from typing import Optional
 from curl_cffi import AsyncSession
@@ -39,7 +39,7 @@ from typing import Optional, List
 import json
 
 
-class PolloCrawler:
+class PolloCrawler(BaseCrawler):
 
     def fetch_tags(self):
         return {
@@ -62,7 +62,7 @@ class PolloCrawler:
                     star=item["starNum"],
                     share=item["shareNum"],
                     video_ratio=item["videoRatio"],
-                    downloaded=item["downloadNum"]
+                    downloaded=item["downloadNum"],
                 )
                 if video_meta:
                     video.width = video_meta.get("width", None)
@@ -79,10 +79,6 @@ class PolloCrawler:
                 )
         return data
 
-    @retry(
-        stop=stop_after_attempt(3),
-        retry_error_callback=lambda retry_state: retry_state.outcome.result(),
-    )
     async def fetch_explore(
         self, tag: str, sub_tag: str, limit: int = 20, cursor: Optional[str] = None
     ):

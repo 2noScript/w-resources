@@ -28,16 +28,19 @@
 # ==============================================================================
 
 
+
+
 from typing import Union
 from fastapi import APIRouter, Form, status
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
 from app.utils.logging_utils import configure_logging
-from app.crawlers.platforms.promeai.crawler import PromeaiCrawler
+from app.crawlers.platforms.seaart.crawler import SeaartCrawler
 from config.settings import Settings
 from app.api.models.APIBaseModel import RequestModel
 
 
-crawler = PromeaiCrawler()
+
+crawler = SeaartCrawler()
 
 router = APIRouter()
 
@@ -47,11 +50,11 @@ logger = configure_logging(name=__name__)
 
 @router.get("/tags", response_model=ResponseModel)
 async def get_tags() -> Union[ResponseModel, ErrorResponseModel]:
-    return ResponseModel(data=crawler.fetch_tags(),version=Settings.PromeaiSettings.version)
+    return ResponseModel(data=crawler.fetch_tags(),version=Settings.SeaartSettings.version)
 
 @router.post(
     "/explore",
-    response_description="Result information of exploring promeai",
+    response_description="Result information of exploring polloai",
 )
 async def get_explore(
     request: RequestModel = Form(...),
@@ -67,13 +70,12 @@ async def get_explore(
             params=request.model_dump(),
             data=data,
             metadata=metadata,
-            version=Settings.PromeaiSettings.version
+            version=Settings.SeaartSettings.version
         )
     except Exception as e:
         logger.error(f"Error: {e}")
         return ErrorResponseModel(
             code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             message=str(e),
-            version=Settings.PromeaiSettings.version
+            version=Settings.SeaartSettings.version
         )
-

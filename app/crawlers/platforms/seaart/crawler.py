@@ -26,3 +26,16 @@
 #                      \          \
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
+
+
+from app.crawlers.BaseCrawler import BaseCrawler
+from app.crawlers.platforms.seaart.tags import SeaArtTags
+
+
+class SeaartCrawler(BaseCrawler):
+
+    def fetch_tags(self):
+        return SeaArtTags
+    
+    async def fetch_explore(self, tag: str, sub_tag: str, limit: int, cursor: str):
+        return [],{}

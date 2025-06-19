@@ -25,23 +25,19 @@
 #                     \          \
 #                      \          \
 #   Feed me Stars ⭐    \          \
-# ===============================================================================
-
-from fastapi import APIRouter
-from app.api.routers import health_check, pollo_resource, promeai_resource, seaart_resource
+# ==============================================================================
 
 
-router = APIRouter()
+from abc import ABC, abstractmethod
 
 
-# Health Check routers
-router.include_router(health_check.router, prefix="/health", tags=["Health-Check"])
+class BaseCrawler(ABC):
+    @abstractmethod
+    def fetch_tags(self):
+        """Fetch tags data"""
+        pass
 
-# Polloai Resource
-router.include_router(pollo_resource.router, prefix="/polloai", tags=["Pollo"])
-
-# Promeai Resource
-router.include_router(promeai_resource.router, prefix="/promeai", tags=["Promeai"])
-
-# Seaart Resource
-router.include_router(seaart_resource.router, prefix="/seaart", tags=["Seaart"])
+    @abstractmethod
+    async def fetch_explore(self, tag: str, sub_tag: str, limit: int, cursor: str):
+        """Fetch explore results"""
+        pass

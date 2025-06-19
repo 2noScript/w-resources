@@ -28,10 +28,53 @@
 # ==============================================================================
 
 
+#  Graphic: picture
+#  Article: article
+#  Video:video
+
+# order_by|timeType|sub_channel
+
 SeaArtTags = [
-    {"name": "Models", "value": ""},
-    {"name": "AI Apps", "value": ""},
-    {"name": "AI Characters", "value": ""},
-    {"name": "AI Audio", "value": ""},
-    {"name": "AI Video", "value": ""},
+    {
+        "name": "Inspiration",
+        "value": "post",
+        "subtags": [
+            {"name": "New", "value": "new"},
+            {"name": "New Graphic", "value": "new|picture"},
+            {"name": "New Article", "value": "new|article"},
+            {"name": "New Video", "value": "new|video"},
+            {"name": "Hot", "value": "hot"},
+            {"name": "Hot Graphic", "value": "hot|picture"},
+            {"name": "Hot Article", "value": "hot|article"},
+            {"name": "Hot Video", "value": "hot|video"},
+        ],
+    },
+    {
+        "name": "AI Apps",
+        "value": "app",
+        "subtags": [
+            {"name": "New", "value": "new"},
+            {"name": "New Video Generation", "value": "new|video"},
+            {"name": "New Image Generation", "value": "new|image"},
+            {"name": "Hot", "value": "hot"},
+            {"name": "Hot Graphic", "value": "hot|picture"},
+            {"name": "Hot Article", "value": "hot|article"},
+            {"name": "Hot Video", "value": "hot|video"},
+        ],
+    },
+    {
+        "name": "AI Characters",
+        "value": "character",
+        "subtags": [
+            {"name": "New", "value": "new"},
+            {"name": "Hot", "value": "hot"},
+        ],
+    },
+    # {"name": "AI Audio", "value": "timbre"},
+    {
+        "name": "Models",
+        "value": "model",
+        "subtags": [{"name": "New", "value": "new"}, {"name": "Hot", "value": "hot"}],
+    },
+    # {"name": "AI Video", "value": "artwork"},
 ]

@@ -44,6 +44,8 @@ class MediaType(Enum):
     IMAGE = "image"
 
 
+
+
 class Video(BaseModel):
     title: Optional[str] = None
     thumbnail: Optional[str] = None

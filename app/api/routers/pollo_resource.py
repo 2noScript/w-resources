@@ -37,7 +37,7 @@ from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
 from config.settings import Settings
 
 
-pollo_crawler = PolloCrawler()
+crawler = PolloCrawler()
 
 router = APIRouter()
 
@@ -46,7 +46,7 @@ logger = configure_logging(name=__name__)
 
 @router.get("/tags", response_model=ResponseModel)
 async def get_tags() -> Union[ResponseModel, ErrorResponseModel]:
-    return ResponseModel(data=pollo_crawler.fetch_tags(),version=Settings.PolloSettings.version)
+    return ResponseModel(data=crawler.fetch_tags(),version=Settings.PolloSettings.version)
 
 
 @router.post(
@@ -57,7 +57,7 @@ async def get_explore(
     request: RequestModel = Form(...),
 ) -> Union[ResponseModel, ErrorResponseModel]:
     try:
-        data, metadata = await pollo_crawler.fetch_explore(
+        data, metadata = await crawler.fetch_explore(
             tag=request.tag,
             sub_tag=request.sub_tag,
             limit=request.limit,

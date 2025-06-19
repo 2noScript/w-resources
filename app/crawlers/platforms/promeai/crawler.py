@@ -28,17 +28,16 @@
 # ==============================================================================
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
+from app.crawlers.BaseCrawler import BaseCrawler
 from app.crawlers.platforms.promeai.tags import PromeaiTags
 from curl_cffi import AsyncSession
-from tenacity import retry, stop_after_attempt
 from config.settings import Settings
 from app.crawlers.platforms.promeai.endpoints import PromeaiEndpoints
 from typing import Optional, List
-import time
 import json
 
 
-class PromeaiCrawler:
+class PromeaiCrawler(BaseCrawler):
 
     def fetch_tags(self):
         return {
@@ -84,10 +83,7 @@ class PromeaiCrawler:
             data.append(explore_data)
         return data
 
-    @retry(
-        stop=stop_after_attempt(3),
-        retry_error_callback=lambda retry_state: retry_state.outcome.result(),
-    )
+
     async def fetch_explore(
         self, tag: str, sub_tag: str, limit: int = 20, cursor: str = None
     ):

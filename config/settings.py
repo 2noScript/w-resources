@@ -40,7 +40,7 @@ class Settings:
 
     class FastAPISettings:
         # Project name
-        title: str = "Free-resources-from-many-sources"
+        title: str = "FreeVerse"
         # Project description
         description: str = "All free"
         # Project version
@@ -80,7 +80,7 @@ class Settings:
 
     class PolloSettings:
         # Polloai Web Cookie
-        cookie: str = os.getenv("POLLO_COOKIE", "")
+        # cookie: str = os.getenv("POLLO_COOKIE", "")
         # Polloai Proxy
         proxy: str = os.getenv("POLLO_PROXY", None)
 
@@ -89,10 +89,18 @@ class Settings:
 
     class PromeaiSettings:
         # Promeai Web Cookie
-        cookie: str = os.getenv("PROMEAi_COOKIE", "")
+        # cookie: str = os.getenv("PROMEAi_COOKIE", "")
         # Promeai Proxy
         proxy: str = os.getenv("PROMEAi_PROXY", None)
 
+        version: str = "0.0.1"
+
+
+    class SeaartSettings:
+        # Seaart Web Cookie
+        # cookie: str = os.getenv("SEAART_COOKIE", "")
+        # Seaart Proxy
+        proxy: str = os.getenv("SEAART_PROXY", None)
         version: str = "0.0.1"
 
 
