@@ -59,6 +59,15 @@ class Video(BaseModel):
     downloaded: Optional[int] = None
 
 
+class Image(BaseModel):
+    title: Optional[str] = None
+    image_url: Optional[str] = None
+    image_url_nwm: Optional[str] = None
+    keywork: List[str] = [],
+    width: Optional[int] = None
+    height: Optional[int] = None
+
+
 class Audio(BaseModel):
     title: str = ""
     audio_url: Optional[str] = None
@@ -66,9 +75,6 @@ class Audio(BaseModel):
     duration_ms: int = 0
 
 
-class Image(BaseModel):
-    title: str = ""
-    image_url: str
 
 
 class ExploreData(BaseModel):

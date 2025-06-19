@@ -67,13 +67,13 @@ async def get_explore(
             params=request.model_dump(),
             data=data,
             metadata=metadata,
-            version=Settings.PolloSettings.version
+            version=Settings.PromeaiSettings.version
         )
     except Exception as e:
         logger.error(f"Error: {e}")
         return ErrorResponseModel(
             code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             message=str(e),
-            version=Settings.PolloSettings.version
+            version=Settings.PromeaiSettings.version
         )
 

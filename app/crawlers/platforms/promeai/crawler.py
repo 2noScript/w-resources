@@ -27,8 +27,15 @@
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
 
-
+from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
 from app.crawlers.platforms.promeai.tags import PromeaiTags
+from curl_cffi import AsyncSession
+from tenacity import retry, stop_after_attempt
+from config.settings import Settings
+from app.crawlers.platforms.promeai.endpoints import PromeaiEndpoints
+from typing import Optional, List
+import time
+import json
 
 
 class PromeaiCrawler:
@@ -38,11 +45,85 @@ class PromeaiCrawler:
             "tags": PromeaiTags,
             "count": len(PromeaiTags),
         }
-    
-    async def fetch_explore(self, tag: str, sub_tag: str, limit: int = 20, cursor: str = None):
-        return {
-            "tag": tag,
-            "sub_tag": sub_tag,
-            "limit": limit,
-            "cursor": cursor,
+
+    def extract_data(self, raw_data) -> List[ExploreData]:
+        data: List[ExploreData] = []
+        for item in raw_data:
+            explore_data = ExploreData(
+                id=item["id"],
+                data_type=DataType.AI_GENERATOR,
+                media_type=[MediaType.IMAGE, MediaType.VIDEO],
+                prompt=item.get("prompt"),
+                model=item.get("modelName"),
+                video_url_nwm=None,
+                duration_ms=None,
+            )
+
+            if item["isVideo"]:
+                video = Video(
+                    title=item["title"],
+                    thumbnail=item["imageUrl"],
+                    video_url=item["result"],
+                    keywork=json.loads(item.get("tag")) if item.get("tag") else [],
+                    video_ratio=item.get("styleInfoJson", {}).get("scale"),
+                    width=item.get("width"),
+                    height=item.get("height"),
+                )
+                explore_data.video = video
+            else:
+                image = Image(
+                    title=item["title"],
+                    image_url=None,
+                    image_url_nwm=item["result"],
+                    keywork=json.loads(item.get("tag")) if item.get("tag") else [],
+                    width=item.get("width"),
+                    height=item.get("height"),
+                )
+                explore_data.image = image
+
+            data.append(explore_data)
+        return data
+
+    @retry(
+        stop=stop_after_attempt(3),
+        retry_error_callback=lambda retry_state: retry_state.outcome.result(),
+    )
+    async def fetch_explore(
+        self, tag: str, sub_tag: str, limit: int = 20, cursor: str = None
+    ):
+        params = {
+            "pageNum": 1,
+            "pageSize": limit,
+            "searchType": 5,
+            "source": tag,
+            "styleId": "",
+            "trendSearch": True,
+            "tag": sub_tag,
         }
+
+        if cursor:
+            page, lastUpdatedAt = cursor.split(":")
+            params["lastUpdatedAt"] = lastUpdatedAt
+            params["pageNum"] = int(page)
+
+        async with AsyncSession(
+            impersonate="chrome", proxy=Settings.PromeaiSettings.proxy
+        ) as session:
+            response = await session.post(PromeaiEndpoints.EXPLORER_ROOT, json=params)
+        if response.status_code != 200:
+            raise Exception(
+                {"crawl_status": response.status_code, "crawl_message": response.text}
+            )
+        res_json = response.json()
+        data = []
+        metadata = {
+            "current_cursor": cursor,
+            "next_cursor": None,
+        }
+        if res_json["data"]["content"]:
+            data = self.extract_data(res_json["data"]["content"])
+            metadata["next_cursor"] = (
+                f"{params["pageNum"] + 1}:{res_json["data"]["content"][-1]["updatedAt"]}"
+            )
+
+        return data, metadata

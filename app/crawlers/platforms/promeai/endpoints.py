@@ -29,6 +29,7 @@
 
 
 class PromeaiEndpoints:
+    
     DOMAIN="https://restapi.promeai.pro"
 
     EXPLORER_ROOT="https://restapi.promeai.pro/prome/ai/gallery/search"
