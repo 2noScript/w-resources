@@ -26,3 +26,9 @@
 #                      \          \
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
+
+
+class ViduEndpoints:
+    DOMAIN = "https://vidu.tv"
+
+    EXPLORER_ROOT = "https://service.vidu.com/vidu/v1/feed"

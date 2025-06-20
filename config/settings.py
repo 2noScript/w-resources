@@ -29,7 +29,6 @@
 
 
 import os
-from typing import Optional
 from dotenv import load_dotenv
 
 # Load .env file
@@ -103,4 +102,33 @@ class Settings:
         proxy: str = os.getenv("SEAART_PROXY", None)
         version: str = "0.0.1"
 
+
+    class ViduSettings:
+        # Vidu Web Cookie
+        # cookie: str = os.getenv("Vidu_COOKIE", "")
+        # Vidu Proxy
+        proxy: str = os.getenv("Vidu_PROXY", None)
+        version: str = "0.0.1"
+
+
+    class ArtlistSettings:
+        # Artlist Web Cookie
+        # cookie: str = os.getenv("ARTLIST_COOKIE", "")
+        # Artlist Proxy
+        proxy: str = os.getenv("ARTLIST_PROXY", None)
+        version: str = "0.0.1"
+
+    class HailuoaiSettings:
+        # Hailuoai Web Cookie
+        # cookie: str = os.getenv("HAILUOAI_COOKIE", "")
+        # Hailuoai Proxy
+        proxy: str = os.getenv("HAILUOAI_PROXY", None)
+        version: str = "0.0.1"
+
+    class KlingaiSettings:
+        # Klingai Web Cookie
+        # cookie: str = os.getenv("Klingai_COOKIE", "")
+        # Klingai Proxy
+        proxy: str = os.getenv("Klingai_PROXY", None)
+        version: str = "0.0.1"
 

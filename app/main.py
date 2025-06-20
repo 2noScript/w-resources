@@ -44,6 +44,10 @@ tags_metadata = [
     {"name": "Pollo", "description": "Resources created by artificial intelligence"},
     {"name": "Promeai", "description": "Resources created by artificial intelligence"},
     {"name": "Seaart", "description": "Resources created by artificial intelligence"},
+    {"name": "Vidu", "description": "Resources created by artificial intelligence"},
+    {"name": "Artlist", "description": "Resources created by artificial intelligence"},
+    {"name": "Hailuoai", "description": "Resources created by artificial intelligence"},
+    {"name": "Klingai", "description": "Resources created by artificial intelligence"},
 ]
 
 

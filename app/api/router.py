@@ -28,7 +28,16 @@
 # ===============================================================================
 
 from fastapi import APIRouter
-from app.api.routers import health_check, pollo_resource, promeai_resource, seaart_resource
+from app.api.routers import (
+    health_check,
+    pollo_resource,
+    promeai_resource,
+    seaart_resource,
+    vidu_resource,
+    artlist_resource,
+    hailuoai_resource,
+    klingai_resource,
+)
 
 
 router = APIRouter()
@@ -45,3 +54,15 @@ router.include_router(promeai_resource.router, prefix="/promeai", tags=["Promeai
 
 # Seaart Resource
 router.include_router(seaart_resource.router, prefix="/seaart", tags=["Seaart"])
+
+# Vidu Resource
+router.include_router(vidu_resource.router, prefix="/vidu", tags=["Vidu"])
+
+# Artlist Resource
+router.include_router(artlist_resource.router, prefix="/artlist", tags=["Artlist"])
+
+# Hailuoai Resource
+router.include_router(hailuoai_resource.router, prefix="/hailuoai", tags=["Hailuoai"])
+
+# Klingai Resource
+router.include_router(klingai_resource.router, prefix="/klingai", tags=["Klingai"])

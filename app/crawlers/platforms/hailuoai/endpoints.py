@@ -26,18 +26,3 @@
 #                      \          \
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
-
-
-ViduTags = [
-    {
-        "name": "Inspirations",
-        "value": "media_asset",
-        "subtags": [
-            {"name": "Recommendations", "value": "recommended"},
-            {"name": "New", "value": "latest"},
-        ],
-    },
-    {"name": "Short Films", "value": "short_film","subtag":[]},
-    # {"name": "Tutorials", "value": ""},
-    # {"name": "References", "value": ""},
-]

@@ -26,3 +26,15 @@
 #                      \          \
 #   Feed me Stars ⭐    \          \
 # ==============================================================================
+
+
+from app.crawlers.BaseCrawler import BaseCrawler
+
+
+class ViduCrawler(BaseCrawler):
+
+    def fetch_tags(self):
+        return super().fetch_tags()
+    
+    def fetch_explore(self, tag, sub_tag, limit, cursor):
+        return super().fetch_explore(tag, sub_tag, limit, cursor)

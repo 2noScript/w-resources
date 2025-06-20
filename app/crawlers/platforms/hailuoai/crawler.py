@@ -28,16 +28,13 @@
 # ==============================================================================
 
 
-ViduTags = [
-    {
-        "name": "Inspirations",
-        "value": "media_asset",
-        "subtags": [
-            {"name": "Recommendations", "value": "recommended"},
-            {"name": "New", "value": "latest"},
-        ],
-    },
-    {"name": "Short Films", "value": "short_film","subtag":[]},
-    # {"name": "Tutorials", "value": ""},
-    # {"name": "References", "value": ""},
-]
+from app.crawlers.BaseCrawler import BaseCrawler
+
+
+class HailuoaiCrawler(BaseCrawler):
+
+    def fetch_tags(self):
+        return super().fetch_tags()
+    
+    def fetch_explore(self, tag, sub_tag, limit, cursor):
+        return super().fetch_explore(tag, sub_tag, limit, cursor)
