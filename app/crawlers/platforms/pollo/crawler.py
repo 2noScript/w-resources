@@ -73,7 +73,7 @@ class PolloCrawler(BaseCrawler):
                         model=item["generateRecord"]["generationConfig"]["configType"],
                         prompt=item["generateRecord"]["prompt"],
                         data_type=DataType.AI_GENERATOR,
-                        media_type=[MediaType.VIDEO],
+                        media_type=MediaType.VIDEO,
                         video=video,
                     )
                 )

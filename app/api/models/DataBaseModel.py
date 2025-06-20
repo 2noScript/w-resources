@@ -44,15 +44,13 @@ class MediaType(Enum):
     IMAGE = "image"
 
 
-
-
 class Video(BaseModel):
     title: Optional[str] = None
     thumbnail: Optional[str] = None
     video_url: Optional[str] = None
     video_url_nwm: Optional[str] = None
     duration_ms: Optional[int] = None
-    keywork: List[str] = []
+    keywork: Optional[List[str]] = []
     video_ratio: Optional[str] = None
     width: Optional[int] = None
     height: Optional[int] = None
@@ -65,7 +63,7 @@ class Image(BaseModel):
     title: Optional[str] = None
     image_url: Optional[str] = None
     image_url_nwm: Optional[str] = None
-    keywork: List[str] = [],
+    keywork: Optional[List[str]] = []
     width: Optional[int] = None
     height: Optional[int] = None
 
@@ -77,13 +75,11 @@ class Audio(BaseModel):
     duration_ms: int = 0
 
 
-
-
 class ExploreData(BaseModel):
     id: Union[str, int]
 
     data_type: DataType
-    media_type: List[MediaType]
+    media_type: MediaType
 
     prompt: Optional[str] = None
     model: Optional[str] = None

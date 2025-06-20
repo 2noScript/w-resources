@@ -29,5 +29,10 @@
 
 
 class SeaartEndpoints:
+
     DOMAIN="https://www.seaart.ai"
-    TAGS_ROOT = "https://seaart.ai/api/collections"
+
+    EXPLORER_INSPIRATION=f"{DOMAIN}/api/v1/square/v3/post/list"
+    EXPLORER_AI_APP=f"{DOMAIN}/api/v1/square/v3/app/list"
+    EXPLORER_CHARACTERS=f"{DOMAIN}/api/v1/square/v3/character/list"
+    EXPLORER_MODEL=f"{DOMAIN}/api/v1/square/v3/model/list"

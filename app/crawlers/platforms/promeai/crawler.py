@@ -51,15 +51,13 @@ class PromeaiCrawler(BaseCrawler):
             explore_data = ExploreData(
                 id=item["id"],
                 data_type=DataType.AI_GENERATOR,
-                media_type=[MediaType.IMAGE, MediaType.VIDEO],
                 prompt=item.get("prompt"),
                 model=item.get("modelName"),
-                video_url_nwm=None,
-                duration_ms=None,
             )
 
             if item["isVideo"]:
-                video = Video(
+                explore_data.media_type=MediaType.VIDEO
+                explore_data.video = Video(
                     title=item["title"],
                     thumbnail=item["imageUrl"],
                     video_url=item["result"],
@@ -68,9 +66,9 @@ class PromeaiCrawler(BaseCrawler):
                     width=item.get("width"),
                     height=item.get("height"),
                 )
-                explore_data.video = video
             else:
-                image = Image(
+                explore_data.media_type=MediaType.IMAGE
+                explore_data.image = Image(
                     title=item["title"],
                     image_url=None,
                     image_url_nwm=item["result"],
@@ -78,8 +76,7 @@ class PromeaiCrawler(BaseCrawler):
                     width=item.get("width"),
                     height=item.get("height"),
                 )
-                explore_data.image = image
-
+                
             data.append(explore_data)
         return data
 

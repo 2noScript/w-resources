@@ -32,7 +32,7 @@
 #  Article: article
 #  Video:video
 
-# order_by|timeType|sub_channel
+# order_by|sub_channel
 
 SeaArtTags = [
     {
