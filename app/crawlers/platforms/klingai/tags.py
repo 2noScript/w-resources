@@ -31,26 +31,26 @@
 KlingaiTags = [
     {
         "name": "Videos",
-        "value": "",
+        "value": "video",
         "subtags": [
-            {"name": "recommend", "value": ""},
-            {"name": "time", "value": ""},
+            {"name": "recommend", "value": "recommend"},
+            {"name": "time", "value": "time"},
         ],
     },
     {
         "name": "images",
-        "value": "",
+        "value": "image",
         "subtags": [
-            {"name": "recommend", "value": ""},
-            {"name": "time", "value": ""},
+            {"name": "recommend", "value": "recommend"},
+            {"name": "time", "value": "time"},
         ],
     },
-    {
-        "name": "Shorts",
-        "value": "",
-        "subtags": [
-            {"name": "recommend", "value": ""},
-            {"name": "time", "value": ""},
-        ],
-    },
+    # {
+    #     "name": "Shorts",
+    #     "value": "shorts",
+    #     "subtags": [
+    #         {"name": "recommend", "value": "recommend"},
+    #         {"name": "time", "value": "time"},
+    #     ],
+    # },
 ]

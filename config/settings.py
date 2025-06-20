@@ -129,6 +129,6 @@ class Settings:
         # Klingai Web Cookie
         # cookie: str = os.getenv("Klingai_COOKIE", "")
         # Klingai Proxy
-        proxy: str = os.getenv("Klingai_PROXY", None)
+        proxy: str = os.getenv("KLINGAI_PROXY", None)
         version: str = "0.0.1"
 

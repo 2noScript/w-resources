@@ -33,7 +33,7 @@ from app.crawlers.platforms.promeai.tags import PromeaiTags
 from curl_cffi import AsyncSession
 from config.settings import Settings
 from app.crawlers.platforms.promeai.endpoints import PromeaiEndpoints
-from typing import Optional, List
+from typing import  List
 import json
 
 
