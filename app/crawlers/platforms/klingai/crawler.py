@@ -29,12 +29,13 @@
 
 
 from app.crawlers.BaseCrawler import BaseCrawler
+from app.crawlers.platforms.klingai.tags import KlingaiTags
 
 
 class KlingaiCrawler(BaseCrawler):
 
     def fetch_tags(self):
-        return super().fetch_tags()
+        return KlingaiTags
     
     def fetch_explore(self, tag, sub_tag, limit, cursor):
         return super().fetch_explore(tag, sub_tag, limit, cursor)

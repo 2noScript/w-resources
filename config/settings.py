@@ -107,7 +107,7 @@ class Settings:
         # Vidu Web Cookie
         # cookie: str = os.getenv("Vidu_COOKIE", "")
         # Vidu Proxy
-        proxy: str = os.getenv("Vidu_PROXY", None)
+        proxy: str = os.getenv("VIDU_PROXY", None)
         version: str = "0.0.1"
 
 

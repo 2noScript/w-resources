@@ -28,4 +28,29 @@
 # ==============================================================================
 
 
-KlingaiTags = []
+KlingaiTags = [
+    {
+        "name": "Videos",
+        "value": "",
+        "subtags": [
+            {"name": "recommend", "value": ""},
+            {"name": "time", "value": ""},
+        ],
+    },
+    {
+        "name": "images",
+        "value": "",
+        "subtags": [
+            {"name": "recommend", "value": ""},
+            {"name": "time", "value": ""},
+        ],
+    },
+    {
+        "name": "Shorts",
+        "value": "",
+        "subtags": [
+            {"name": "recommend", "value": ""},
+            {"name": "time", "value": ""},
+        ],
+    },
+]
