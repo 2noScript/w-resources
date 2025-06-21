@@ -30,9 +30,9 @@
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video
 from app.crawlers.BaseCrawler import BaseCrawler
-from app.crawlers.platforms.pollo.endpoints import PolloEndpoints
+from app.crawlers.generative.pollo.endpoints import PolloEndpoints
 from config.settings import Settings
-from app.crawlers.platforms.pollo.tags import PolloTags
+from app.crawlers.generative.pollo.tags import PolloTags
 from typing import Optional
 from curl_cffi import AsyncSession
 from typing import Optional, List

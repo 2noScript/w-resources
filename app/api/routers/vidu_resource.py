@@ -32,7 +32,7 @@ from typing import Union
 from fastapi import APIRouter, Form, status
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
 from app.utils.logging_utils import configure_logging
-from app.crawlers.platforms.vidu.crawler import ViduCrawler
+from app.crawlers.generative.vidu.crawler import ViduCrawler
 from config.settings import Settings
 from app.api.models.APIBaseModel import RequestModel
 

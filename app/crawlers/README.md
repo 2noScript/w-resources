@@ -7,7 +7,7 @@
 ```shell
 ├── crawlers
 │   ├── README.md
-│   └── platforms
+│   └── generative
 │       ├── (item)
 │       │   ├── README.md
 │       │   ├── crawler.py

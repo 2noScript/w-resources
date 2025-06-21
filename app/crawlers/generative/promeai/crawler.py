@@ -29,10 +29,10 @@
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
 from app.crawlers.BaseCrawler import BaseCrawler
-from app.crawlers.platforms.promeai.tags import PromeaiTags
+from app.crawlers.generative.promeai.tags import PromeaiTags
 from curl_cffi import AsyncSession
 from config.settings import Settings
-from app.crawlers.platforms.promeai.endpoints import PromeaiEndpoints
+from app.crawlers.generative.promeai.endpoints import PromeaiEndpoints
 from typing import  List
 import json
 

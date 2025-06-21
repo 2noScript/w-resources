@@ -29,8 +29,8 @@
 
 
 from app.crawlers.BaseCrawler import BaseCrawler
-from app.crawlers.platforms.klingai.endpoints import KlingaiEndpoints
-from app.crawlers.platforms.klingai.tags import KlingaiTags
+from app.crawlers.generative.klingai.endpoints import KlingaiEndpoints
+from app.crawlers.generative.klingai.tags import KlingaiTags
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
 from typing import List
 from curl_cffi import AsyncSession

@@ -34,7 +34,7 @@ from typing import Union
 from fastapi import APIRouter, Form, status
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
 from app.utils.logging_utils import configure_logging
-from app.crawlers.platforms.seaart.crawler import SeaartCrawler
+from app.crawlers.generative.seaart.crawler import SeaartCrawler
 from config.settings import Settings
 from app.api.models.APIBaseModel import RequestModel
 

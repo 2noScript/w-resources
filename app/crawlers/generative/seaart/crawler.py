@@ -29,8 +29,8 @@
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
 from app.crawlers.BaseCrawler import BaseCrawler
-from app.crawlers.platforms.seaart.tags import SeaArtTags
-from app.crawlers.platforms.seaart.endpoints import SeaartEndpoints
+from app.crawlers.generative.seaart.tags import SeaArtTags
+from app.crawlers.generative.seaart.endpoints import SeaartEndpoints
 from curl_cffi import AsyncSession
 from config.settings import Settings
 from typing import List

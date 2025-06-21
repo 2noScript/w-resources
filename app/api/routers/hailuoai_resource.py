@@ -34,7 +34,7 @@ from typing import Union
 from fastapi import APIRouter, Form, status
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
 from app.utils.logging_utils import configure_logging
-from app.crawlers.platforms.hailuoai.crawler import HailuoaiCrawler
+from app.crawlers.generative.hailuoai.crawler import HailuoaiCrawler
 from config.settings import Settings
 from app.api.models.APIBaseModel import RequestModel
 

@@ -32,7 +32,7 @@ from typing import Union
 from fastapi import APIRouter, Form, status
 from app.api.models.APIBaseModel import RequestModel
 from app.utils.logging_utils import configure_logging
-from app.crawlers.platforms.pollo.crawler import PolloCrawler
+from app.crawlers.generative.pollo.crawler import PolloCrawler
 from app.api.models.APIBaseModel import ResponseModel, ErrorResponseModel
 from config.settings import Settings
 
