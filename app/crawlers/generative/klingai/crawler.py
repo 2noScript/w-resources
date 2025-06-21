@@ -28,7 +28,7 @@
 # ==============================================================================
 
 
-from app.crawlers.BaseCrawler import BaseCrawler
+from app.crawlers.BaseGenerativeCrawler import BaseGenerativeCrawler
 from app.crawlers.generative.klingai.endpoints import KlingaiEndpoints
 from app.crawlers.generative.klingai.tags import KlingaiTags
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
@@ -38,7 +38,7 @@ from config.settings import Settings
 import json
 
 
-class KlingaiCrawler(BaseCrawler):
+class KlingaiCrawler(BaseGenerativeCrawler):
 
     def find_argument_value(self, arguments, target_name):
         for arg in arguments:

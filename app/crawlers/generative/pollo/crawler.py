@@ -29,7 +29,7 @@
 
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video
-from app.crawlers.BaseCrawler import BaseCrawler
+from app.crawlers.BaseGenerativeCrawler import BaseGenerativeCrawler
 from app.crawlers.generative.pollo.endpoints import PolloEndpoints
 from config.settings import Settings
 from app.crawlers.generative.pollo.tags import PolloTags
@@ -39,7 +39,7 @@ from typing import Optional, List
 import json
 
 
-class PolloCrawler(BaseCrawler):
+class PolloCrawler(BaseGenerativeCrawler):
 
     def fetch_tags(self):
         return {

@@ -28,7 +28,7 @@
 # ==============================================================================
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
-from app.crawlers.BaseCrawler import BaseCrawler
+from app.crawlers.BaseGenerativeCrawler import BaseGenerativeCrawler
 from app.crawlers.generative.promeai.tags import PromeaiTags
 from curl_cffi import AsyncSession
 from config.settings import Settings
@@ -37,7 +37,7 @@ from typing import  List
 import json
 
 
-class PromeaiCrawler(BaseCrawler):
+class PromeaiCrawler(BaseGenerativeCrawler):
 
     def fetch_tags(self):
         return {

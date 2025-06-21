@@ -25,16 +25,19 @@
 #                     \          \
 #                      \          \
 #   Feed me Stars ⭐    \          \
-# ==============================================================================
+# ===============================================================================
+
+from config.settings import Settings
 
 
-from app.crawlers.BaseGenerativeCrawler import BaseGenerativeCrawler
+class DouyinCrawler:
 
-
-class HailuoaiCrawler(BaseGenerativeCrawler):
-
-    def fetch_tags(self):
-        return super().fetch_tags()
+    def get_header(self):
+        return {
+            "Accept-Language": "zh-CN,zh;q=0.9",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36",
+            "Referer": "https://www.douyin.com/",
+            "Cookie": Settings.DouyinCrawlerSettings.cookie,
+        }
     
-    def fetch_explore(self, tag, sub_tag, limit, cursor):
-        return super().fetch_explore(tag, sub_tag, limit, cursor)
+    

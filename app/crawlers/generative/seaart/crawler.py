@@ -28,7 +28,7 @@
 # ==============================================================================
 
 from app.api.models.DataBaseModel import ExploreData, DataType, MediaType, Video, Image
-from app.crawlers.BaseCrawler import BaseCrawler
+from app.crawlers.BaseGenerativeCrawler import BaseGenerativeCrawler
 from app.crawlers.generative.seaart.tags import SeaArtTags
 from app.crawlers.generative.seaart.endpoints import SeaartEndpoints
 from curl_cffi import AsyncSession
@@ -36,7 +36,7 @@ from config.settings import Settings
 from typing import List
 
 
-class SeaartCrawler(BaseCrawler):
+class SeaartCrawler(BaseGenerativeCrawler):
 
     def __get_url_explore(self, tag):
         if tag == "post":

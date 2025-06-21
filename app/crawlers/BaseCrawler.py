@@ -31,7 +31,7 @@
 from abc import ABC, abstractmethod
 
 
-class BaseCrawler(ABC):
+class BaseGenerativeCrawler(ABC):
     @abstractmethod
     def fetch_tags(self):
         """Fetch tags data"""
@@ -40,4 +40,16 @@ class BaseCrawler(ABC):
     @abstractmethod
     async def fetch_explore(self, tag: str, sub_tag: str, limit: int, cursor: str):
         """Fetch explore results"""
+        pass
+
+
+class BaseSocialCrawler(BaseGenerativeCrawler):
+    @abstractmethod
+    def fetch_user(self, user_id: str):
+        """Fetch user data"""
+        pass
+
+    @abstractmethod
+    async def fetch_user_posts(self, user_id: str, limit: int, cursor: str):
+        """Fetch user posts"""
         pass

@@ -131,4 +131,19 @@ class Settings:
         # Klingai Proxy
         proxy: str = os.getenv("KLINGAI_PROXY", None)
         version: str = "0.0.1"
+    
+
+    # socical 
+    class DouyinCrawlerSettings:
+        # Douyin Web Cookie
+        cookie: str = os.getenv("DOUYIN_COOKIE", "")
+        # Douyin Proxy
+        proxy: str = os.getenv("DOUYIN_PROXY", None)
+        version: str = "0.0.1"
+
+
+
+
+
+
 

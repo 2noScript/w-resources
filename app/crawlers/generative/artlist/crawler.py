@@ -28,10 +28,10 @@
 # ==============================================================================
 
 
-from app.crawlers.BaseCrawler import BaseCrawler
+from app.crawlers.BaseGenerativeCrawler import BaseGenerativeCrawler
 
 
-class ArtlistCrawler(BaseCrawler):
+class ArtlistCrawler(BaseGenerativeCrawler):
 
     def fetch_tags(self):
         return super().fetch_tags()
